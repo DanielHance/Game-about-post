@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4vq270cfcl1x"]
+
+[ext_resource type="SpriteFrames" uid="uid://cy8xi1stfeawm" path="res://Objects/Player/Animations/player_spritesheet.tres" id="1_156m4"]
+[ext_resource type="Script" uid="uid://cpl62oss1ocxn" path="res://Objects/Player/player.gd" id="1_yw17q"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cvnsp"]
+radius = 0.20529
+height = 0.76621
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+collision_layer = 3
+script = ExtResource("1_yw17q")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+texture_filter = 0
+sprite_frames = ExtResource("1_156m4")
+animation = &"idel_up"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_cvnsp")
