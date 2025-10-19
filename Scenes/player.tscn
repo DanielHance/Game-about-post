@@ -7,9 +7,10 @@
 radius = 0.20529
 height = 0.76621
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D"]
 collision_layer = 3
 script = ExtResource("1_yw17q")
+sprite_sheet = ExtResource("1_156m4")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 texture_filter = 0

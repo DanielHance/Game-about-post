@@ -7,6 +7,7 @@ var sprite: AnimatedSprite3D
 var front_vec: Vector3 = Vector3(0, 0, -1)
 var input_vec = Vector3.ZERO
 var face_vec: Vector3 = Vector3(0, 0, -1)
+var current_npc: Area3D = null
 
 func _ready() -> void:
 	sprite = $AnimatedSprite3D
@@ -26,12 +27,12 @@ func _process(delta: float) -> void:
 	input_vec = input_vec.normalized() #Just to be safe
 	
 func _physics_process(delta: float) -> void:
-	#Convert 2D input to 3D plane
+	#------------------------------------Movement
 	velocity = input_vec * speed
 	move_and_slide()
 	look_at(global_transform.origin + front_vec, Vector3.UP)
 	
-	#Animation
+	#-----------------------------------Animation
 	var frame_name = ""
 	
 	if input_vec != Vector3.ZERO:
@@ -52,7 +53,14 @@ func _physics_process(delta: float) -> void:
 	sprite.sprite_frames = sprite_sheet
 	sprite.play(frame_name)
 	
-	#print("Available animations:", sprite.sprite_frames.get_animation_names())
+	#---------------------------------------NPC Interactions 
+	if Input.is_action_just_pressed("interact") and current_npc:
+		DialogueManager.start_dialogue(
+			current_npc.dialogue_file,
+			current_npc.portrait,
+			current_npc.character_name
+		)
+		print("Working")
 		
 	
 	

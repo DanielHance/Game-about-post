@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://sjxl8cgxaggn"]
 
 [ext_resource type="PackedScene" uid="uid://c4vq270cfcl1x" path="res://Scenes/player.tscn" id="1_8gbba"]
-[ext_resource type="PackedScene" uid="uid://b81fw8wg5nr1b" path="res://Scenes/test_world.tscn" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://dhyy1nuvvpimk" path="res://Scenes/test_world.tscn" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://db3nugscpnk4r" path="res://System/Camera/follow_camera.tscn" id="3_kry3j"]
-[ext_resource type="SpriteFrames" uid="uid://cy8xi1stfeawm" path="res://Objects/Player/Animations/player_spritesheet.tres" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://b0efq0fajejnt" path="res://Scenes/npc_test.tscn" id="4_jjvhh"]
 
 [node name="Main" type="Node3D"]
 
@@ -12,8 +12,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.690152, -0.292047, 3.86475
 
 [node name="Follow_Camera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_kry3j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44359, 0, 1.79114)
-player = NodePath("../CharacterBody3D")
+player = NodePath("../Player")
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_8gbba")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.370616, 0.085305, 2.45044)
-sprite_sheet = ExtResource("4_jjvhh")
+[node name="NPC_Test" parent="." instance=ExtResource("4_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.66916, 0.0751684, 1.49898)
+
+[node name="Player" parent="." instance=ExtResource("1_8gbba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.430087, 0.0900559, 1.41201)
