@@ -8,6 +8,7 @@ var front_vec: Vector3 = Vector3(0, 0, -1)
 var input_vec = Vector3.ZERO
 var face_vec: Vector3 = Vector3(0, 0, -1)
 var current_npc: Area3D = null
+var player_name: String = "Dan"
 
 func _ready() -> void:
 	sprite = $AnimatedSprite3D
@@ -55,12 +56,23 @@ func _physics_process(delta: float) -> void:
 	
 	#---------------------------------------NPC Interactions 
 	if Input.is_action_just_pressed("interact") and current_npc:
-		DialogueManager.start_dialogue(
-			current_npc.dialogue_file,
+		DialogueManager.dialogue(
+			current_npc.character_name,
 			current_npc.portrait,
-			current_npc.character_name
+			player_name
 		)
-		print("Working")
+		
+	if Input.is_action_just_pressed("drop"):
+		DialogueManager.dialogue(
+			"drop",
+			"res://Objects/Other/transparent_texture.png",
+			player_name
+		)
+		
+	if Input.is_action_just_pressed("unlock (debug)"):
+		DialogueManager.unlock()
+		
+		
 		
 	
 	
