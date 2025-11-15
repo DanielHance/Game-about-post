@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhyy1nuvvpimk"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rq1x1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bwha0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bwha0"]
+
+[node name="Test World" type="Node3D"]
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_rq1x1")
+
+[node name="Light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0570761, 0.99837, 0, -0.99837, -0.0570761, 0, 1.93281, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.710592, -2.34809)
+mesh = SubResource("BoxMesh_bwha0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_bwha0")

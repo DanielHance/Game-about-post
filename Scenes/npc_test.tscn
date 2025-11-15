@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0efq0fajejnt"]
+
+[ext_resource type="Script" uid="uid://17c55oksfhvr" path="res://Objects/NPC/npc_test.gd" id="1_oc6g0"]
+[ext_resource type="SpriteFrames" uid="uid://c088estkgpy1u" path="res://Objects/NPC/NPC_test_spritesheet.tres" id="2_1y6qx"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j1pmc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eto13"]
+radius = 0.146935
+height = 0.792501
+
+[node name="NPC_Test" type="Node3D"]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+texture_filter = 0
+sprite_frames = ExtResource("2_1y6qx")
+animation = &"idel"
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("1_oc6g0")
+dialogue_file = "res://Assets/Temp/demo_text.txt"
+portrait = "uid://clamf7d16cghu"
+character_name = "Vampire"
+
+[node name="Talkbox" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_j1pmc")
+
+[node name="Hitbox" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_eto13")
