@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyt1jx0g6ja3m"]
+
+[ext_resource type="Script" uid="uid://dueqbgcd4ljro" path="res://System/UI/buttons_ui.gd" id="1_ch5yu"]
+
+[node name="ButtonsUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ch5yu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.505882)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
