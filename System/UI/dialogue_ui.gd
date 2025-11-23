@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var text_lable = $"Control/Text background/Dialogue"
 @onready var next_button = $"Control/Text background/Next Button"
 
+#Pre-load font and stuff
+
 var empty_texture: Texture =  preload("res://Objects/Other/transparent_texture.png")
 var npc_texture
 var player_name
@@ -35,6 +37,9 @@ func _show_next_line():
 	if name.to_lower() == "player":
 		portrait.texture = empty_texture
 		name = player_name
+	elif name.to_lower() == "think":
+		portrait.texture = empty_texture
+		name = "CHANGE FONT"
 	else:
 		portrait.texture = npc_texture
 	

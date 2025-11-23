@@ -1,0 +1,76 @@
+!branch - 0
+Boss : “Alright, kid.”
+Boss : “That letter is addressed to a lovely lady whose usually strolling round town.”
+Boss : “Ya can’t miss her she’s usually [insert description once drawn]”
+Boss : “I’ll see ya back here once ya done.”
+
+!choice : Drop = 1, Lady = 2, Guy = 3
+
+!branch - 1
+#[Discard letter]
+Think : You throw away the letter, letting it drift silently to never be seen again.
+Think : But what is that teary sound nearby?
+Think : A guy is crying on the street.
+#[Player finds the guy]
+Guy : “Why won’t she answer me?”
+Player : “What’s wrong?”
+Guy : “I sent a letter to confess my love to the most beautiful woman in town and she won’t respond.”
+Think : Your mind goes to the letter you just threw away.
+Think : Maybe he needs a push to talk to her himself?
+Player : “Why don’t you go talk to her in person if she didn’t respond to you?”
+Guy : “Maybe you’re right.”
+Guy : “She probably thinks I’m a coward for not going in person.”
+Guy : “Thank you, kind stranger.”
+Think : With a nod, he rushes off. 
+#[delete Guy character in game]
+#[player returns to the mail center]
+Boss : “I hear that little lady ya sent the letter to is going on a date tonight.”
+Think : He seems to have not noticed the letter’s disappearance.
+Boss : “It’s a small town we live in. Everyone talks.”
+Boss : “I’m glad for her. Good job.”
+#[mission complete]
+!score
+!script = menu.txt
+
+!branch - 2
+#[Player delivers the letter to the lady]
+Lady : “Why thank you.”
+Think : She opens the letter, delighted by the contents.
+Lady : “Oh wow, you must wait here a second so I can write a reply.”
+Think : She pulls an ornate quill from her pocket.
+Think : She writes a reply in the most beautiful cursive below the original letter’s text.
+Lady : “I wish to return it to the sender.”
+Lady : “I believe he must be around town somewhere.”
+Lady : “He usually wears [insert description based on image]”
+#[player delivers letter to guy]
+Guy : “Thanks a lot.”
+#[player returns to the mail center]
+Boss : “I hear that little lady ya sent the letter to is going on a date tonight.”
+Boss : “It’s a small town we live in. Everyone talks.”
+Boss : “I’m glad for her. 
+Boss : “We really do make dreams come true here. Good job.”
+#[mission complete]
+!score
+!script = menu.txt
+
+!branch - 3
+#[Player talks to the letters sender]
+Guy : “Heya, I heard you were delivering letters.”
+Think : You nod.
+Guy : “I sent a letter a while ago.”
+Think : He studies the envelope you’re holding.
+Guy : “Hey, that’s it!”
+Guy : “Actually, I need your help.”
+Guy : “That letter is a confession of love to this wonderful lady who lives near here.”
+Guy : “She’s really special, you know?”
+Guy : “And I was wondering if maybe I wasn’t good enough?”
+Guy : “So how about you forget about that letter for me.”
+#You return the letter to its original owner.
+Guy : “Thanks a lot. You saved me a lot of embarrassment.”
+#[player returns to the mail center]
+Boss : “Wow, that was quick.”
+Boss : “If you continue working this fast, I’ll be forced to promote ya.”
+He chuckles. 
+#[mission complete]
+!score
+!script = menu.txt

@@ -1,25 +1,74 @@
-[gd_scene load_steps=6 format=3 uid="uid://sjxl8cgxaggn"]
+[gd_scene load_steps=11 format=3 uid="uid://sjxl8cgxaggn"]
 
 [ext_resource type="PackedScene" uid="uid://c4vq270cfcl1x" path="res://Scenes/player.tscn" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dhyy1nuvvpimk" path="res://Scenes/test_world.tscn" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://db3nugscpnk4r" path="res://System/Camera/follow_camera.tscn" id="3_kry3j"]
-[ext_resource type="PackedScene" uid="uid://b0efq0fajejnt" path="res://Scenes/npc_test.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://daeof8u6wclaj" path="res://Scenes/npc_FL.tscn" id="5_hptm8"]
 [ext_resource type="PackedScene" uid="uid://fhkkaq5xvxwv" path="res://Scenes/npc_Boss.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://bjh3sq2lpl04o" path="res://Scenes/npc_Graveyard.tscn" id="6_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://80gsn82yy1c7" path="res://Scenes/npc_Guy.tscn" id="7_6iyac"]
+[ext_resource type="PackedScene" uid="uid://c1xao10f72wr4" path="res://Scenes/npc_Lady.tscn" id="8_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://fne42dtytsxu" path="res://Scenes/npc_Lighthouse Owner.tscn" id="9_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://d2pdtp28tngp7" path="res://Scenes/npc_Vampire.tscn" id="10_wsu2k"]
 
 [node name="Main" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.644709, 0, 0)
 
 [node name="Test World" parent="." instance=ExtResource("2_jjvhh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.690152, -0.292047, 3.86475)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.690152, -0.292047, 6.72623)
 
 [node name="Follow_Camera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_kry3j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44359, 0, 1.79114)
 player = NodePath("../Player")
 
-[node name="NPC_Test" parent="." instance=ExtResource("4_jjvhh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.66916, 0.0751684, 1.49898)
-
 [node name="Player" parent="." instance=ExtResource("1_8gbba")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.430087, 0.0900559, 1.41201)
 
-[node name="NPC_Test3" parent="." instance=ExtResource("5_kry3j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99365, 0.0856937, 1.88412)
+[node name="NPC_Test" parent="." instance=ExtResource("5_kry3j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.18375, 0, 2.23199)
+
+[node name="Label3D" type="Label3D" parent="NPC_Test"]
+transform = Transform3D(-0.99999, 0, 0.00457276, 0, 1, 0, -0.00457276, 0, -0.99999, 0, 0, -0.381153)
+text = "Boss"
+
+[node name="NPC_Test2" parent="." instance=ExtResource("5_hptm8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39682, 0, 2.21436)
+
+[node name="Label3D" type="Label3D" parent="NPC_Test2"]
+transform = Transform3D(-0.999932, 0, 0.0116934, 0, 1, 0, -0.0116934, 0, -0.999932, 0, 0, -0.421541)
+text = "FL"
+
+[node name="NPC_Test3" parent="." instance=ExtResource("6_d1ilt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57794, 0, 2.22436)
+
+[node name="Label3D" type="Label3D" parent="NPC_Test3"]
+transform = Transform3D(-0.999057, 0, 0.0434102, 0, 1, 0, -0.0434102, 0, -0.999057, 0, 0, -0.349007)
+text = "Graveyard"
+
+[node name="NPC_Test4" parent="." instance=ExtResource("7_6iyac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.875945, 0, 2.24734)
+
+[node name="Label3D" type="Label3D" parent="NPC_Test4"]
+transform = Transform3D(-0.998799, 0, 0.0489891, 0, 1, 0, -0.0489891, 0, -0.998799, 0, 0, -0.227664)
+text = "Guy"
+
+[node name="NPC_Test5" parent="." instance=ExtResource("8_fdnlq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71742, 0, 2.14956)
+
+[node name="Label3D" type="Label3D" parent="NPC_Test5"]
+transform = Transform3D(-0.999809, 0, -0.019564, 0, 1, 0, 0.019564, 0, -0.999809, 0, 0, -0.234916)
+text = "Lady"
+
+[node name="NPC_Test6" parent="." instance=ExtResource("9_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.62105, 0, 2.16596)
+
+[node name="Label3D" type="Label3D" parent="NPC_Test6"]
+transform = Transform3D(-1, 0, 0.000436219, 0, 1, 0, -0.000436219, 0, -1, 0, 0, -0.334034)
+text = "Lighthouse Owner"
+
+[node name="NPC_Test7" parent="." instance=ExtResource("10_wsu2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.87247, 0, 2.18015)
+
+[node name="Label3D" type="Label3D" parent="NPC_Test7"]
+transform = Transform3D(-0.999969, 0, 0.00788886, 0, 1, 0, -0.00788886, 0, -0.999969, 0, 0, -0.255404)
+text = "Vampire"

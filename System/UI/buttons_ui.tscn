@@ -13,11 +13,13 @@ script = ExtResource("1_ch5yu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1149.0
+offset_bottom = 646.0
 color = Color(0, 0, 0, 0.505882)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 374.0
+offset_top = 69.0
+offset_right = 827.0
+offset_bottom = 545.0

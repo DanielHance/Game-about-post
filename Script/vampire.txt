@@ -7,9 +7,9 @@ Boss : “Let me know once ya get back.”
 !branch - 1
 Vampire : “Oh thanks sweetie, it came just in time.”
 Vampire : “Would you mind helping an elder out and help me unpack this stuff.”
+Think : The Vampire opens the parcel to reveal pink, sparkly birthday decorations.
+Think : You help the Vampire decorate the front of the house.
 !lock
-#The Vampire opens the parcel to reveal pink, sparkly birthday decorations.
-#You help the Vampire decorate the front of the house.
 #[Change mansion texture to pink variant]
 Vampire : “Thanks hun. I’ll make sure to tell your boss what a good little creature you are.”
 #[player returns to the mail center]
@@ -18,18 +18,20 @@ Boss : “They usually invite you in for tea and then…”
 #The boss shifts uncomfortably. 
 Boss : “I'm glad ya came back in one piece, kid.”
 #[mission complete]
-!Script = 1
+!score
+!Script = menu.txt
 
 !branch - 2
 #[player discards parcel from inventory]
-#You drop the parcel causing a pile of pink glitter to fall from a crack in the box.
+Think : You drop the parcel causing a pile of pink glitter to fall from a crack in the box.
 #[player returns to the mail center]
 Boss : “Those mansion dwellers keep callin’ about their parcel.”
-#You can’t hide the guilty look on your face.
+Think : You can’t hide the guilty look on your face.
 Boss : “You gotta be serious!?”
 Boss : “I gave you ONE JOB!”
 Boss : “I suppose if you want a job done properly ya gotta do it yourself.”
 Boss : “Hmm, I’ll add it to my list of jobs.”
 Boss : “I don’t usually give people chances but I’ll make an exception for ya as I’m busy.”
 #[mission complete]
-!script = test.txt
+!score
+!script = menu.txt

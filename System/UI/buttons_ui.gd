@@ -18,7 +18,7 @@ func _build_buttons()-> void:
 		child.queue_free()
 		
 	#Adds gaps between buttons
-	var count = clamp(_options.size(), 2, 4)
+	var count = clamp(_options.size(), 1, 4)
 	#container.spacing = 16
 	
 	#Create each button
@@ -36,5 +36,5 @@ func _build_buttons()-> void:
 		
 func _on_option_pressed(index: int) -> void:
 	#Send option selected back to dialogue manager
-	DialogueManager.button_return(_callback[index])
+	DialogueManager.button_return(_callback[index], _callback)
 	queue_free()

@@ -1,6 +1,5 @@
 extends Area3D
 
-@export_file("*.txt") var dialogue_file
 @export_file("*.png") var portrait
 @export var character_name: String = "NPC"
 @export var sprite: AnimatedSprite3D
