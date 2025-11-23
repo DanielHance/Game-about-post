@@ -8,7 +8,7 @@ Player : …
 Boss : “Heh, ya don’t know?”
 Boss : “Then I better give ya somewhere to stay.”
 Boss : “Howabout ya work for me and I’ll letcha stay ‘ere.”
-!Button : Nod your head = B0 : Shake your head = B1
+!Button : Nod your head = 0 : Shake your head = 1
 !Branch - 1
 Boss : “It’s not like ya have anywhere else to go.”
 Player : He’s right. You can’t argue with a free place to stay.
