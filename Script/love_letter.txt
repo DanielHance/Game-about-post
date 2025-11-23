@@ -29,6 +29,7 @@ Think : He seems to have not noticed the letter’s disappearance.
 Boss : “It’s a small town we live in. Everyone talks.”
 Boss : “I’m glad for her. Good job.”
 #[mission complete]
+!score
 !script = menu.txt
 
 !branch - 2
@@ -49,6 +50,7 @@ Boss : “It’s a small town we live in. Everyone talks.”
 Boss : “I’m glad for her. 
 Boss : “We really do make dreams come true here. Good job.”
 #[mission complete]
+!score
 !script = menu.txt
 
 !branch - 3
@@ -70,4 +72,5 @@ Boss : “Wow, that was quick.”
 Boss : “If you continue working this fast, I’ll be forced to promote ya.”
 He chuckles. 
 #[mission complete]
+!score
 !script = menu.txt

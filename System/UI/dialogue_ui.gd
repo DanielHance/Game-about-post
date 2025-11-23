@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var text_lable = $"Control/Text background/Dialogue"
 @onready var next_button = $"Control/Text background/Next Button"
 
+#Pre-load font and stuff
+
 var empty_texture: Texture =  preload("res://Objects/Other/transparent_texture.png")
 var npc_texture
 var player_name

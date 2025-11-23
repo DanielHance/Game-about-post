@@ -18,6 +18,7 @@ Boss : “They usually invite you in for tea and then…”
 #The boss shifts uncomfortably. 
 Boss : “I'm glad ya came back in one piece, kid.”
 #[mission complete]
+!score
 !Script = menu.txt
 
 !branch - 2
@@ -32,4 +33,5 @@ Boss : “I suppose if you want a job done properly ya gotta do it yourself.”
 Boss : “Hmm, I’ll add it to my list of jobs.”
 Boss : “I don’t usually give people chances but I’ll make an exception for ya as I’m busy.”
 #[mission complete]
+!score
 !script = menu.txt

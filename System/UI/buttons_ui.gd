@@ -36,5 +36,5 @@ func _build_buttons()-> void:
 		
 func _on_option_pressed(index: int) -> void:
 	#Send option selected back to dialogue manager
-	DialogueManager.button_return(_callback[index])
+	DialogueManager.button_return(_callback[index], _callback)
 	queue_free()

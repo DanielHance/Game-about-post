@@ -25,6 +25,7 @@ Boss : “Hope that wasn’t too much trouble for ya.”
 Boss : “Every month I gotta do her a favour.”
 Boss : “Ya really helped me out there, bud.”
 #[mission complete]
+!score
 !script = menu.txt
 
 !branch - 2
@@ -40,4 +41,5 @@ Think : Not quite sure what you saw, you continue with your day.
 Boss : “Well that’s one more job done for today.”
 Boss : “The work around here never stops.”
 #[mission complete]
+!score
 !script = menu.txt

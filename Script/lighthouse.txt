@@ -19,6 +19,7 @@ Lighthouse owner: “Now you best be off now before your boss comes looking for 
 #[player returns to the mail center]
 Boss: “Nice one, kid.”
 #[mission complete]
+!score
 !script = menu.txt
 
 !branch - 2
@@ -32,4 +33,5 @@ Boss : “It’s been out for weeks and that package was the new bulb shipment.�
 Boss : “So if ya really did take it, there’d be a big ol’ light shining right about now.”
 Boss : “It better not happen again, hmm?”
 #[mission complete]
+!score
 !script = menu.txt

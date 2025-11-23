@@ -9,6 +9,7 @@ var input_vec = Vector3.ZERO
 var face_vec: Vector3 = Vector3(0, 0, -1)
 var current_npc: Area3D = null
 var player_name: String = "Dan"
+var lock = false
 
 func _ready() -> void:
 	sprite = $AnimatedSprite3D
@@ -30,7 +31,8 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	#------------------------------------Movement
 	velocity = input_vec * speed
-	move_and_slide()
+	if !lock:
+		move_and_slide()
 	look_at(global_transform.origin + front_vec, Vector3.UP)
 	
 	#-----------------------------------Animation
@@ -72,8 +74,5 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("unlock (debug)"):
 		DialogueManager.unlock()
 		
-		
-		
-	
-	
-	
+func set_lock(flag: bool):
+	lock = flag
