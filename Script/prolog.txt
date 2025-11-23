@@ -8,15 +8,15 @@ Player : …
 Boss : “Heh, ya don’t know?”
 Boss : “Then I better give ya somewhere to stay.”
 Boss : “Howabout ya work for me and I’ll letcha stay ‘ere.”
-!Button : Nod your head = 0 : Shake your head = 1
-!Branch - 1
+!button : Shake your head = 1, Nod your head = 0
+!branch - 1
 Boss : “It’s not like ya have anywhere else to go.”
-Player : He’s right. You can’t argue with a free place to stay.
-!Branch = 0
+Think : He’s right. You can’t argue with a free place to stay.
+!branch = 0
 #[continue]
-!Branch - 0
+!branch - 0
 Boss : “Then it’s settled.”
 Boss : “You can stay here but first ya better help me out with that mail you crushed while asleep.”
 Boss: “I also gotta few personal favours I need ya help with.”
 Boss : “After helping me this week, that attic above this mail center is yours.”
-!Script = vampire.txt
+!script = menu.txt

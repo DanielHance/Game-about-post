@@ -6,13 +6,17 @@ var instance_ui
 var instance_button
 
 var file_paths = [
-		"res://Script/test.txt",
 		"res://Script/prolog.txt",
-		"res://Script/vampire.txt"
+		"res://Script/menu.txt",
+		"res://Script/vampire.txt",
+		"res://Script/love_letter.txt",
+		"res://Script/graveyard.txt",
+		"res://Script/lighthouse.txt"
 	]
 
+var button_locks = [] #TODO
 var text_files = []
-var current_script: int = 1
+var current_script: int = 0
 var current_branch: int = 0
 var temp_NPC
 var line_marker: int = 0
@@ -69,9 +73,8 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 				
 			if line_branch == current_branch:
 				#Checks if script command has been called
-				if line.to_lower().begins_with("!scrip"):
+				if line.to_lower().begins_with("!script"):
 					parts = line.split("=", false, 1)
-					print(parts[1].to_lower())
 					current_script = file_paths.find("res://Script/" + parts[1].to_lower().strip_edges())
 					current_branch = 0
 					line_marker = 0
@@ -115,7 +118,7 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 					
 				elif ":" in line:
 					parts = line.split(":", false, 1)
-					if parts[0].strip_edges().to_lower() == "player" or parts[0].strip_edges().to_lower() == NPC_name.to_lower():
+					if parts[0].strip_edges().to_lower() == "player" or parts[0].strip_edges().to_lower() == NPC_name.to_lower() or parts[0].strip_edges().to_lower() == "think":
 						lines.append(line)
 					else:
 						#Stop adding text
@@ -129,12 +132,14 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 	
 func button_return(callback: String):
 	#TODO Change so that the branch/Script is changes based of button respoance 
-	print("Working")
+	print("HERE")
 	print(callback)
-	if typeof(callback) == TYPE_INT:
+	print(callback.is_valid_int())
+	if callback.is_valid_int():
 		current_branch = int(callback)
 		line_marker += 1
 	else:
+		print(file_paths.find("res://Script/" + callback.to_lower().strip_edges()))
 		current_script = file_paths.find("res://Script/" + callback.to_lower().strip_edges())
 		current_branch = 0
 		line_marker = 0
@@ -146,20 +151,21 @@ func finish_dialogue():
 		print("Button flag is true")
 		#Get button options from line and send to button script
 		button_flag = false
-		var data = text_files[current_script][line_marker].split(":", false)
-		if len(data) < 1:
+		var temp = text_files[current_script][line_marker].split(":", false)
+		var data = temp[1].split(",", false)
+		if len(data) == 0:
 			push_error("Something is wrong with !buttons on line", line_marker)
 		var lables: Array[String] = [] #Need long def or everything breaks >:(
 		var callbacks: Array = []
 		var part
-		for i in range(1, len(data)):
+		for i in range(len(data)):
 			part = data[i].split("=", false, 1)
 			lables.append(part[0].strip_edges())
 			callbacks.append(part[1].strip_edges().to_lower())
 		_start_dialogue_buttons(lables, callbacks)
 	if text_flag:
-		dialogue(NPC_name, portrait_path, player_name)
 		text_flag = false
+		dialogue(NPC_name, portrait_path, player_name)
 		
 func unlock():
 	lock = false

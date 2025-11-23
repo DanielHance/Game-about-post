@@ -70,8 +70,7 @@ func _physics_process(delta: float) -> void:
 		)
 		
 	if Input.is_action_just_pressed("unlock (debug)"):
-		#DialogueManager.unlock()
-		DialogueManager._start_dialogue_buttons(["Option 1", "Option 2", "Option 3"], [1, 2, 3])
+		DialogueManager.unlock()
 		
 		
 		

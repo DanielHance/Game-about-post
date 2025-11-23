@@ -1,0 +1,21 @@
+branch - 0
+Boss: “So what shall we do?”
+
+!button : LoveLetters = love_letter.txt, LighthouseQuest = lighthouse.txt, Vampires = vampire.txt, Ghosts = graveyard.txt
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%The text below this will never run beacuse of the buttons above changing the script
+!branch - 1
+Player: Deliver one of the crushed letters.
+#[love letter quest]
+
+!branch - 2
+Player: Deliver a fragile parcel before you fall asleep and crush it.
+#[lighthouse quest]
+
+!branch - 3
+Player: Deliver one of the brightly coloured, urgent parcels.
+#[vampire quest]
+
+!branch - 4
+Player: Do a favour for your new boss.
+#[ghost quest]

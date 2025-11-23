@@ -18,7 +18,7 @@ func _build_buttons()-> void:
 		child.queue_free()
 		
 	#Adds gaps between buttons
-	var count = clamp(_options.size(), 2, 4)
+	var count = clamp(_options.size(), 1, 4)
 	#container.spacing = 16
 	
 	#Create each button

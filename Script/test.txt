@@ -1,8 +1,0 @@
-Boss : “Glad you’re awake, kid.”
-Boss : “I found ya passed out on some old letters I was meant to deliver last week.”
-Boss : “So where are ya from?”
-Player : …
-Boss : “Heh, ya don’t know?”
-Boss : “Then I better give ya somewhere to stay.”
-Boss : “How about ya work for me and I’ll letcha stay ‘ere.”
-Player : Finished test!

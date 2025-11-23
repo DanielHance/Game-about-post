@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxppb5hlnrubi"]
+[gd_scene load_steps=5 format=3 uid="uid://80gsn82yy1c7"]
 
-[ext_resource type="Script" uid="uid://17c55oksfhvr" path="res://Objects/NPC/npc_test.gd" id="1_oc6g0"]
-[ext_resource type="SpriteFrames" uid="uid://c088estkgpy1u" path="res://Objects/NPC/NPC_test_spritesheet.tres" id="2_1y6qx"]
+[ext_resource type="SpriteFrames" uid="uid://c088estkgpy1u" path="res://Objects/NPC/NPC_test_spritesheet.tres" id="1_j2hhe"]
+[ext_resource type="Script" uid="uid://17c55oksfhvr" path="res://Objects/NPC/npc_test.gd" id="2_m3m6s"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j1pmc"]
 
@@ -13,13 +13,13 @@ height = 0.792501
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 texture_filter = 0
-sprite_frames = ExtResource("2_1y6qx")
+sprite_frames = ExtResource("1_j2hhe")
 animation = &"idel"
 
 [node name="Area3D" type="Area3D" parent="."]
-script = ExtResource("1_oc6g0")
-portrait = "uid://clamf7d16cghu"
-character_name = "Vampire"
+script = ExtResource("2_m3m6s")
+portrait = "uid://byn6gx5ku8wcp"
+character_name = "Guy"
 
 [node name="Talkbox" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_j1pmc")

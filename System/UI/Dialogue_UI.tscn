@@ -34,11 +34,11 @@ offset_left = 10.0
 offset_top = 82.0
 offset_right = 1139.0
 offset_bottom = 155.0
-theme_override_font_sizes/bold_italics_font_size = 50
-theme_override_font_sizes/italics_font_size = 50
-theme_override_font_sizes/mono_font_size = 50
-theme_override_font_sizes/normal_font_size = 50
-theme_override_font_sizes/bold_font_size = 50
+theme_override_font_sizes/bold_italics_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/mono_font_size = 20
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
 
 [node name="Next Button" type="Button" parent="Control/Text background"]
 layout_mode = 0

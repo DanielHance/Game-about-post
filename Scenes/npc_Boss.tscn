@@ -18,8 +18,7 @@ animation = &"idel"
 
 [node name="Area3D" type="Area3D" parent="."]
 script = ExtResource("2_jhu34")
-dialogue_file = "res://Assets/Temp/demo_text.txt"
-portrait = "uid://clamf7d16cghu"
+portrait = "uid://bf2u2v1vh8ejw"
 character_name = "Boss"
 
 [node name="Talkbox" type="CollisionShape3D" parent="Area3D"]

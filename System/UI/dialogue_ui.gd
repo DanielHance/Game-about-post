@@ -35,6 +35,9 @@ func _show_next_line():
 	if name.to_lower() == "player":
 		portrait.texture = empty_texture
 		name = player_name
+	elif name.to_lower() == "think":
+		portrait.texture = empty_texture
+		name = "CHANGE FONT"
 	else:
 		portrait.texture = npc_texture
 	

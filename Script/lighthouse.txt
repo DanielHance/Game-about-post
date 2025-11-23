@@ -1,0 +1,35 @@
+!branch - 0
+
+Boss : “Good idea!”
+Boss : “We don’t wantcha breaking that fragile package on accident.”
+Boss : “Howaboat ya take it take it to its rightful owna at the lighthouse?”
+Boss : “Then it’s outta our hands and when ya get back I might have another job for ya.”
+#[fragile parcel added to inventory]
+!choice : Lighthouse owner = 1, Drop = 2
+
+!branch - 1
+#[player goes to lighthouse and interacts with it to deliver parcel]
+Lighthouse owner : “Thanks, lad.”
+Lighthouse owner: “I’ve been waitin’ for this new lightbulb for a while.”
+Lighthouse owner: “Let’s go see if it works.”
+!lock
+#[change to lighthouse texture turning light on]
+Lighthouse owner : “Ah, that’s much better.”
+Lighthouse owner: “Now you best be off now before your boss comes looking for you.”
+#[player returns to the mail center]
+Boss: “Nice one, kid.”
+#[mission complete]
+!script = menu.txt
+
+!branch - 2
+#[player discards parcel from inventory]
+Think : You hear the sound of smashed glass as you toss the package aside.
+#[player returns to the mail center]
+Boss : “A lil birdy told me the lighthouse didn’t get its parcel.”
+Player: “How could you know?”
+Boss : “See that bulb up at the top of the lighthouse?”
+Boss : “It’s been out for weeks and that package was the new bulb shipment.”
+Boss : “So if ya really did take it, there’d be a big ol’ light shining right about now.”
+Boss : “It better not happen again, hmm?”
+#[mission complete]
+!script = menu.txt
