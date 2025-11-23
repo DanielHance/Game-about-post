@@ -127,16 +127,25 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 	print("Lanch")
 	_start_dialogue(lines, portrait_path, player_name, NPC_name)
 	
-func button_return(choice: int):
+func button_return(callback: String):
 	#TODO Change so that the branch/Script is changes based of button respoance 
 	print("Working")
-	print(choice)
+	print(callback)
+	if typeof(callback) == TYPE_INT:
+		current_branch = int(callback)
+		line_marker += 1
+	else:
+		current_script = file_paths.find("res://Script/" + callback.to_lower().strip_edges())
+		current_branch = 0
+		line_marker = 0
 	text_flag = true
 	finish_dialogue()
 	
 func finish_dialogue():
 	if button_flag:
+		print("Button flag is true")
 		#Get button options from line and send to button script
+		button_flag = false
 		var data = text_files[current_script][line_marker].split(":", false)
 		if len(data) < 1:
 			push_error("Something is wrong with !buttons on line", line_marker)
@@ -148,7 +157,6 @@ func finish_dialogue():
 			lables.append(part[0].strip_edges())
 			callbacks.append(part[1].strip_edges().to_lower())
 		_start_dialogue_buttons(lables, callbacks)
-		button_flag = false
 	if text_flag:
 		dialogue(NPC_name, portrait_path, player_name)
 		text_flag = false
