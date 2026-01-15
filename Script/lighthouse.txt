@@ -4,6 +4,7 @@ Boss : “Good idea!”
 Boss : “We don’t wantcha breaking that fragile package on accident.”
 Boss : “Howaboat ya take it take it to its rightful owna at the lighthouse?”
 Boss : “Then it’s outta our hands and when ya get back I might have another job for ya.”
+Think : The nearby lighthouse looks like the right place.
 #[fragile parcel added to inventory]
 !choice : Lighthouse owner = 1, Drop = 2
 
@@ -25,6 +26,7 @@ Boss: “Nice one, kid.”
 !branch - 2
 #[player discards parcel from inventory]
 Think : You hear the sound of smashed glass as you toss the package aside.
+Think : It's better to return quick so the Boss doesn't get too mad if he finds out.
 #[player returns to the mail center]
 Boss : “A lil birdy told me the lighthouse didn’t get its parcel.”
 Player: “How could you know?”

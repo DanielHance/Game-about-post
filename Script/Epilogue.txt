@@ -1,0 +1,5 @@
+Boss : “Well I sure am busy but that’s all ya can do to help me for today.”
+Boss : “How about ya get some rest, then you’ll be back here tomorrow nice and early.”
+Boss : “Thanks for helping out, kid!”
+
+#[end screen]

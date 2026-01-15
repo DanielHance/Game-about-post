@@ -1,18 +1,6 @@
-[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://c088estkgpy1u"]
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://c088estkgpy1u"]
 
 [ext_resource type="Texture2D" uid="uid://ggwbydx4v6xr" path="res://Objects/Player/Free Character Sprites - Fantasy Dreamland/48x48/Char_006_Idle.png" id="1_lttf3"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4e3x7"]
-atlas = ExtResource("1_lttf3")
-region = Rect2(216, 0, 72, 72)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_56a1l"]
-atlas = ExtResource("1_lttf3")
-region = Rect2(144, 0, 72, 72)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t77wd"]
-atlas = ExtResource("1_lttf3")
-region = Rect2(72, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0la1c"]
 atlas = ExtResource("1_lttf3")
@@ -21,15 +9,6 @@ region = Rect2(0, 0, 72, 72)
 [resource]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4e3x7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_56a1l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t77wd")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0la1c")
 }],
