@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dycy367ovn53n"]
+
+[ext_resource type="Texture2D" uid="uid://c107suvnntwh5" path="res://Objects/3D Models/Textures/PartySet.png" id="1_acyrq"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_acyrq")

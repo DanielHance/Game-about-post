@@ -1,0 +1,52 @@
+# Blender 5.0.1 MTL File: 'GameJam2025_ForExport.blend'
+# www.blender.org
+
+newmtl HouseSets
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl Leaves
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd D:/Pictures/Textures/GameJam_2025/Hedge/Leaves.png
+map_d D:/Pictures/Textures/GameJam_2025/Hedge/Leaves.png
+
+newmtl MailCentre
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.341673 0.554139 0.801684
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl PartySet
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd D:/Pictures/Textures/GameJam_2025/PartySet/PartySet.png
+map_d D:/Pictures/Textures/GameJam_2025/PartySet/PartySet.png
+
+newmtl Wood_Basic
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.185905 0.124992 0.099392
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
