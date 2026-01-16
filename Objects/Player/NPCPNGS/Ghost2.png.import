@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvgopf81hlens"
-path="res://.godot/imported/VampirePixel.png-6aaf204913aa62d8f7803bb83e0a0d40.ctex"
+uid="uid://dsfdmf2j6j5px"
+path="res://.godot/imported/Ghost2.png-be78bbcf4e0135c69a8243b6d0b9c9aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Player/NPCPNGS/VampirePixel.png"
-dest_files=["res://.godot/imported/VampirePixel.png-6aaf204913aa62d8f7803bb83e0a0d40.ctex"]
+source_file="res://Objects/Player/NPCPNGS/Ghost2.png"
+dest_files=["res://.godot/imported/Ghost2.png-be78bbcf4e0135c69a8243b6d0b9c9aa.ctex"]
 
 [params]
 
