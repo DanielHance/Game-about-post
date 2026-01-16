@@ -4,9 +4,9 @@ extends CanvasLayer
 @onready var name_lable = $"Control/Text background/NPC Name"
 @onready var text_lable = $"Control/Text background/Dialogue"
 @onready var next_button = $"Control/Text background/Next Button"
+@onready var text_sound: AudioStreamPlayer2D = $"Text Sound"
 
 #Pre-load font and stuff
-
 var empty_texture: Texture =  preload("res://Objects/Other/transparent_texture.png")
 var npc_texture
 var player_name
@@ -15,6 +15,23 @@ var portrait_path
 
 var lines = []
 var current_line: int = 0
+
+#Below is for the word appearing one at a time 
+@export var letter_speed = 0.05
+var letters = ""
+var letter_index = 0
+var elapsed = 0
+var is_typing  = false
+
+@export var pitch = 1.2
+var letter_sounds: Dictionary = {}
+
+func _ready():
+	#Load letter sounds
+	for i in range(26):
+		var letter_name = char(65 + i)
+		var path = "res://Sound/Letter Speach Sounds/%s.wav" % letter_name
+		letter_sounds[letter_name] = load(path)
 
 func load_dialogue(dialogue_text: Array, portrait_path: String, NPC_name_local: String, player_name_local: String = "Player"):
 	player_name = player_name_local
@@ -44,12 +61,44 @@ func _show_next_line():
 		portrait.texture = npc_texture
 	
 	name_lable.text = name
-	text_lable.text = body
+	
+	letters = body
+	letter_index = 0
+	elapsed = 0.0
+	text_lable.text = ""
+	is_typing = true
+	
 	current_line += 1
 	
 func _on_Button_pressed():
+	if is_typing:
+		text_lable.text = letters
+		is_typing = false
+		return
 	_show_next_line()
 
-
-func _on_button_pressed() -> void:
-	pass # Replace with function body.
+	
+#Timer that controls speed words appear at
+func _process(delta):
+	if not is_typing:
+		return
+		
+	elapsed += delta
+	if elapsed >= letter_speed and letter_index < letters.length():
+		elapsed = 0.0
+		
+		var letter = letters[letter_index]
+		text_lable.text += letter
+		letter_index += 1
+		
+		#Skips delay on punchuation
+		if letter in ".!?,":
+			elapsed += letter_speed
+		
+		if letter.to_upper() in letter_sounds:
+			text_sound.stream = letter_sounds[letter.to_upper()] 
+			text_sound.pitch_scale = pitch + randf_range(-0.05, 0.05)
+			text_sound.play()
+		
+	if letter_index >= letters.length():
+		is_typing = false

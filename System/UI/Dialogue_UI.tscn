@@ -64,4 +64,6 @@ grow_vertical = 2
 expand_mode = 3
 stretch_mode = 5
 
+[node name="Text Sound" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="pressed" from="Control/Text background/Next Button" to="." method="_on_Button_pressed"]

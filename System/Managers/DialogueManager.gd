@@ -11,7 +11,8 @@ var file_paths = [
 		"res://Script/vampire.txt",
 		"res://Script/love_letter.txt",
 		"res://Script/graveyard.txt",
-		"res://Script/lighthouse.txt"
+		"res://Script/lighthouse.txt",
+		"res://Script/epilogue.txt"
 	]
 
 var score: int = 0  #This varable sucks and should be changed at a later data!!!!
@@ -53,9 +54,7 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 	print("Script = ", current_script)
 	
 	if score == 4:
-		print("Finished")
-		#Do something 
-	
+		current_script = file_paths.find("res://Script/epilogue.txt")
 	if lock:
 		return
 	
@@ -83,6 +82,7 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 					current_script = file_paths.find("res://Script/" + parts[1].to_lower().strip_edges())
 					current_branch = 0
 					line_marker = 0
+					text_flag = true
 					if current_script == -1:
 						push_error("Invalid script") #Think the error detection is broken so don't make any errors
 					
