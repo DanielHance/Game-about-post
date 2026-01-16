@@ -15,7 +15,7 @@ sprite_sheet = ExtResource("1_156m4")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 texture_filter = 0
 sprite_frames = ExtResource("1_156m4")
-animation = &"idel_up"
+animation = &"walk_up"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_cvnsp")

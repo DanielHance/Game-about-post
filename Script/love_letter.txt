@@ -1,8 +1,9 @@
 !branch - 0
 Boss : “Alright, kid.”
 Boss : “That letter is addressed to a lovely lady whose usually strolling round town.”
-Boss : “Ya can’t miss her she’s usually [insert description once drawn]”
+Boss : “Ya can’t miss her she’s usually wearing a pink top and blue jeans.”
 Boss : “I’ll see ya back here once ya done.”
+Think : Now's your chance to explore and get to talk to some locals.
 
 !choice : Drop = 1, Lady = 2, Guy = 3
 
@@ -22,6 +23,7 @@ Guy : “Maybe you’re right.”
 Guy : “She probably thinks I’m a coward for not going in person.”
 Guy : “Thank you, kind stranger.”
 Think : With a nod, he rushes off. 
+Think : It's looking late enough to head back to your boss.
 #[delete Guy character in game]
 #[player returns to the mail center]
 Boss : “I hear that little lady ya sent the letter to is going on a date tonight.”
@@ -41,9 +43,11 @@ Think : She pulls an ornate quill from her pocket.
 Think : She writes a reply in the most beautiful cursive below the original letter’s text.
 Lady : “I wish to return it to the sender.”
 Lady : “I believe he must be around town somewhere.”
-Lady : “He usually wears [insert description based on image]”
+Lady : “He usually wears blue and has a beautiful purple tail.”
 #[player delivers letter to guy]
 Guy : “Thanks a lot.”
+Think : Job done.
+Think : Time to head back?
 #[player returns to the mail center]
 Boss : “I hear that little lady ya sent the letter to is going on a date tonight.”
 Boss : “It’s a small town we live in. Everyone talks.”

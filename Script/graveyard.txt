@@ -1,7 +1,7 @@
 !branch - 0
 
 Boss : “Ah, well if ya wanna do a favour for me, there’s a lady who has a special delivery.”
-Boss : “You’ll need to collect it from her, I believe she [insert description once drawn]”
+Boss : “You’ll need to collect it from her, I believe she has grey hair and likes the colour purple.”
 #[player finds flower lady (FL)]
 FL : “Hello there, can you help me?”
 !button: Nod. = 0
@@ -10,6 +10,7 @@ FL : “They’re for someone really important to me so please take good care of
 FL : “These legs of mine can’t take me as far as they used to.”
 FL : “I would be very grateful if you helped me.”
 Think : You take the flowers from her.
+Think : Should you deliver the flowers to the graveyard or discard them? 
 
 !choice : Graveyard = 1, Drop = 2
 
@@ -20,6 +21,7 @@ Think : The graveyard is eerily quiet.
 Think : Crows circle a singular grave, the only one that has been cared for in centuries.
 Think : You lay the flowers by the headstone, unable to make out its owner.
 Think : The crows seem to bow in appreciation and fly away.
+Think : The other side of town beckons you to return.
 #[return to mail center]
 Boss : “Hope that wasn’t too much trouble for ya.”
 Boss : “Every month I gotta do her a favour.”
@@ -36,7 +38,7 @@ Think : A man watches from a sidestreet and picks up the flowers.
 Think : Looking at you with disapproval.
 Think : He looks like he’s heading to the graveyard.
 Think : But before he makes it more than a few meters, both him and the flowers are gone.
-Think : Not quite sure what you saw, you continue with your day.
+Think : Not quite sure what you saw, you continue with your day and return to deliver more mail.
 #[return to the mail center]
 Boss : “Well that’s one more job done for today.”
 Boss : “The work around here never stops.”

@@ -2,6 +2,8 @@
 Boss : “Okay, so this package needs to go to the big gothic mansion across the town.”
 Boss : “It’s real important that it arrives today as it’s for a birthday.”
 Boss : “Let me know once ya get back.”
+Think : The parcel is pretty heavy.
+Think : It would be best to deliver it quickly or get rid of it soon.
 !Choice : Vampire = 1, Drop = 2
 #[player goes to mansion and interacts with it to deliver parcel]
 !branch - 1
@@ -12,6 +14,8 @@ Think : You help the Vampire decorate the front of the house.
 !lock
 #[Change mansion texture to pink variant]
 Vampire : “Thanks hun. I’ll make sure to tell your boss what a good little creature you are.”
+Think : That was easy.
+Think : Time for another job?
 #[player returns to the mail center]
 Boss : “That was quicker than I thought.”
 Boss : “They usually invite you in for tea and then…”
