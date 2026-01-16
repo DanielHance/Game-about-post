@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://cjm31icevy3es"
-path="res://.godot/imported/B.wav-6f8052b00f9fe85af85fd7272a8592e7.sample"
+uid="uid://patn4nhcsley"
+path="res://.godot/imported/H.wav-f1f71cca06397a9695ca2f986c36e87f.sample"
 
 [deps]
 
-source_file="res://Sound/B.wav"
-dest_files=["res://.godot/imported/B.wav-6f8052b00f9fe85af85fd7272a8592e7.sample"]
+source_file="res://Sound/Letter Speach Sounds/H.wav"
+dest_files=["res://.godot/imported/H.wav-f1f71cca06397a9695ca2f986c36e87f.sample"]
 
 [params]
 
