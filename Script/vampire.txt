@@ -9,7 +9,7 @@ Think : It would be best to deliver it quickly or get rid of it soon.
 !branch - 1
 Vampire : “Oh thanks sweetie, it came just in time.”
 Vampire : “Would you mind helping an elder out and help me unpack this stuff.”
-Think : The Vampire opens the parcel to reveal pink, sparkly birthday decorations.
+Think : The Vampire opens the parcel to reveal colourful, sparkly birthday decorations.
 Think : You help the Vampire decorate the front of the house.
 !lock
 #[Change mansion texture to pink variant]
@@ -19,7 +19,7 @@ Think : Time for another job?
 #[player returns to the mail center]
 Boss : “That was quicker than I thought.”
 Boss : “They usually invite you in for tea and then…”
-#The boss shifts uncomfortably. 
+Think : The boss shifts uncomfortably. 
 Boss : “I'm glad ya came back in one piece, kid.”
 #[mission complete]
 !score
@@ -27,7 +27,8 @@ Boss : “I'm glad ya came back in one piece, kid.”
 
 !branch - 2
 #[player discards parcel from inventory]
-Think : You drop the parcel causing a pile of pink glitter to fall from a crack in the box.
+Think : You drop the parcel causing a pile of rainbow glitter to fall from a crack in the box.
+Think : They won't want a damaged parcel now so may as well take it back to the Boss.
 #[player returns to the mail center]
 Boss : “Those mansion dwellers keep callin’ about their parcel.”
 Think : You can’t hide the guilty look on your face.

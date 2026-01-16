@@ -1,15 +1,165 @@
-[gd_scene load_steps=11 format=3 uid="uid://sjxl8cgxaggn"]
+[gd_scene load_steps=35 format=3 uid="uid://sjxl8cgxaggn"]
 
 [ext_resource type="PackedScene" uid="uid://c4vq270cfcl1x" path="res://Scenes/player.tscn" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dhyy1nuvvpimk" path="res://Scenes/test_world.tscn" id="2_jjvhh"]
+[ext_resource type="Texture2D" uid="uid://b7s0tuivo6ee4" path="res://Objects/Player/NPCPNGS/BossPixel.png" id="3_6iyac"]
 [ext_resource type="PackedScene" uid="uid://db3nugscpnk4r" path="res://System/Camera/follow_camera.tscn" id="3_kry3j"]
+[ext_resource type="Texture2D" uid="uid://cm5tmwidxieuv" path="res://Objects/Player/NPCPNGS/BossIdlePixel.png" id="4_fdnlq"]
+[ext_resource type="Texture2D" uid="uid://bkxf3neu405ug" path="res://Objects/Player/NPCPNGS/FlowerSenderPixel.png" id="5_ee4r6"]
 [ext_resource type="PackedScene" uid="uid://daeof8u6wclaj" path="res://Scenes/npc_FL.tscn" id="5_hptm8"]
 [ext_resource type="PackedScene" uid="uid://fhkkaq5xvxwv" path="res://Scenes/npc_Boss.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://bjh3sq2lpl04o" path="res://Scenes/npc_Graveyard.tscn" id="6_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://davpn43qfdaef" path="res://Objects/Player/NPCPNGS/FLIdlePixel.png" id="6_gt3je"]
+[ext_resource type="Texture2D" uid="uid://g5rwmdyg5wac" path="res://Objects/Player/NPCPNGS/LightouseKeeperPixel.png" id="7_3pmx8"]
 [ext_resource type="PackedScene" uid="uid://80gsn82yy1c7" path="res://Scenes/npc_Guy.tscn" id="7_6iyac"]
 [ext_resource type="PackedScene" uid="uid://c1xao10f72wr4" path="res://Scenes/npc_Lady.tscn" id="8_fdnlq"]
+[ext_resource type="Texture2D" uid="uid://i0si5j3gwiat" path="res://Objects/Player/NPCPNGS/LKIdlePixel.png" id="8_u50mg"]
+[ext_resource type="Texture2D" uid="uid://bvgopf81hlens" path="res://Objects/Player/NPCPNGS/VampirePixel.png" id="9_cbgmd"]
 [ext_resource type="PackedScene" uid="uid://fne42dtytsxu" path="res://Scenes/npc_Lighthouse Owner.tscn" id="9_jkdf5"]
+[ext_resource type="Texture2D" uid="uid://bx3kao7abreo7" path="res://Objects/Player/NPCPNGS/Ghost1.png" id="9_u50mg"]
+[ext_resource type="Texture2D" uid="uid://djh5hq08iwcln" path="res://Objects/Player/NPCPNGS/VampireIdlePixel.png" id="10_1w6v2"]
+[ext_resource type="Texture2D" uid="uid://dsfdmf2j6j5px" path="res://Objects/Player/NPCPNGS/Ghost2.png" id="10_cbgmd"]
 [ext_resource type="PackedScene" uid="uid://d2pdtp28tngp7" path="res://Scenes/npc_Vampire.tscn" id="10_wsu2k"]
+[ext_resource type="Texture2D" uid="uid://bvcd8db28qunk" path="res://Objects/Player/NPCPNGS/Ghost3.png" id="11_1w6v2"]
+[ext_resource type="Texture2D" uid="uid://f2hide4ip230" path="res://Objects/Player/NPCPNGS/LLRPixel.png" id="11_ueoa1"]
+[ext_resource type="Texture2D" uid="uid://d2tgyheqnahjc" path="res://Objects/Player/NPCPNGS/LLRIdlePixel.png" id="12_6vcvc"]
+[ext_resource type="Texture2D" uid="uid://btjmbo5q0nwll" path="res://Objects/Player/NPCPNGS/LLSPixel.png" id="13_7k868"]
+[ext_resource type="Texture2D" uid="uid://f1y4yjfgarpf" path="res://Objects/Player/NPCPNGS/LLSIdlePixel.png" id="14_hpc6h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jkdf5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6iyac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fdnlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6iyac")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kltya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ee4r6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gt3je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ee4r6")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e08e2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_3pmx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u50mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3pmx8")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ueoa1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_u50mg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6vcvc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_cbgmd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7k868"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_1w6v2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_neg2b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_cbgmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1w6v2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cbgmd")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r33sp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ueoa1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6vcvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ueoa1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hdf80"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_7k868")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hpc6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7k868")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
 
 [node name="Main" type="Node3D"]
 
@@ -20,8 +170,86 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.690152, -0.292047, 6.72623
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44359, 0, 1.79114)
 player = NodePath("../Player")
 
+[node name="Boss" type="Node3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -5.03156, -0.292047, 1.21037)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Boss"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.80912, 0.220074, -0.0289114)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_jkdf5")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.322552
+
+[node name="FlowerLady" type="Node3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 13.7372, 0.554062, 2.09885)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="FlowerLady"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25834, 0, -2.433)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_kltya")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="LighthouseKeeper" type="Node3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 15.2508, 0.669799, -6.25111)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="LighthouseKeeper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19469, 0, 3.92558)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_e08e2")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Ghosts" type="Node3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -9.09631, 0.359957, 7.93199)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Ghosts"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59858, 0.0448908, -1.0668)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_ueoa1")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Ghosts/AnimatedSprite3D"]
+transform = Transform3D(0.921416, 0, -0.388577, 0, 1, 0, 0.388577, 0, 0.921416, 0.934293, 0, -0.413463)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_6vcvc")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Ghosts/AnimatedSprite3D/AnimatedSprite3D"]
+transform = Transform3D(0.982939, 0, -0.183934, 0, 1, 0, 0.183934, 0, 0.982939, -1.43313, 0, 0.604375)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_7k868")
+
+[node name="Vampire" type="Node3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 6.36752, 0.536207, -0.0607011)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Vampire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4925, 0, 1.98173)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_neg2b")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="LLRecipient" type="Node3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -10.2269, 0.57287, -5.52074)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="LLRecipient"]
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_r33sp")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="LLSender" type="Node3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 13.824, 0.555092, -1.44051)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="LLSender"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.21506, 0, 1.14244)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_hdf80")
+animation = &"Idle"
+autoplay = "Idle"
+
 [node name="Player" parent="." instance=ExtResource("1_8gbba")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.430087, 0.359957, 1.41201)
+transform = Transform3D(2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, 14.0264, 0.359957, -1.44051)
 
 [node name="NPC_Test" parent="." instance=ExtResource("5_kry3j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.18375, 0, -2.78616)

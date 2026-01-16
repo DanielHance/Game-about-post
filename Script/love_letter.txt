@@ -69,8 +69,9 @@ Guy : “That letter is a confession of love to this wonderful lady who lives ne
 Guy : “She’s really special, you know?”
 Guy : “And I was wondering if maybe I wasn’t good enough?”
 Guy : “So how about you forget about that letter for me.”
-#You return the letter to its original owner.
+Think : You return the letter to its original owner.
 Guy : “Thanks a lot. You saved me a lot of embarrassment.”
+Think : The quick encounter leaves more time to deliver mail today.
 #[player returns to the mail center]
 Boss : “Wow, that was quick.”
 Boss : “If you continue working this fast, I’ll be forced to promote ya.”

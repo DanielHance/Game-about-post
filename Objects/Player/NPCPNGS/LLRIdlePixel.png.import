@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvgopf81hlens"
-path="res://.godot/imported/VampirePixel.png-6aaf204913aa62d8f7803bb83e0a0d40.ctex"
+uid="uid://d2tgyheqnahjc"
+path="res://.godot/imported/LLRIdlePixel.png-4214c6767097701a4fc760a00651d418.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/Player/NPCPNGS/VampirePixel.png"
-dest_files=["res://.godot/imported/VampirePixel.png-6aaf204913aa62d8f7803bb83e0a0d40.ctex"]
+source_file="res://Objects/Player/NPCPNGS/LLRIdlePixel.png"
+dest_files=["res://.godot/imported/LLRIdlePixel.png-4214c6767097701a4fc760a00651d418.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
