@@ -13,7 +13,7 @@ Vampire : “Oh thanks sweetie, it came just in time.”
 Vampire : “Would you mind helping an elder out and help me unpack this stuff.”
 Think : The Vampire opens the parcel to reveal colourful, sparkly birthday decorations.
 Think : You help the Vampire decorate the front of the house.
-!lock
+!vam_house
 #[Change mansion texture to pink variant]
 !item : null
 Vampire : “Thanks hun. I’ll make sure to tell your boss what a good little creature you are.”
