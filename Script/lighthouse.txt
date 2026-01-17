@@ -15,7 +15,6 @@ Think : The nearby lighthouse looks like the right place.
 Lighthouse owner : “Thanks, lad.”
 Lighthouse owner: “I’ve been waitin’ for this new lightbulb for a while.”
 Lighthouse owner: “Let’s go see if it works.”
-!lock
 #[change to lighthouse texture turning light on]
 Lighthouse owner : “Ah, that’s much better.”
 Lighthouse owner: “Now you best be off now before your boss comes looking for you.”

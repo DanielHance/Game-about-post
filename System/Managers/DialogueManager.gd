@@ -3,9 +3,11 @@ extends Node
 var dialogue_ui = preload("res://System/UI/Dialogue_UI.tscn")
 var button_ui = preload("res://System/UI/buttons_ui.tscn")
 var item_ui = preload("res://Scenes/item_ui.tscn") #Don't know why this is in a diffrent folder :/
+var end_ui = preload("res://System/UI/End_Screen.tscn")
 var instance_ui
 var instance_button
 var instance_item
+var instance_end
 
 var file_paths = [
 		"res://Script/prolog.txt",
@@ -17,7 +19,8 @@ var file_paths = [
 		"res://Script/epilogue.txt"
 	]
 
-var score: int = 0  #This varable sucks and should be changed at a later data!!!!
+var end_flag = false
+var score: int = 3  #This varable sucks and should be changed at a later data!!!!
 var button_locks = [] 
 var text_files = []
 var current_script: int = 0
@@ -57,8 +60,13 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 	print("Start")
 	print("Script = ", current_script)
 	
+	#TEMP - Chage later :D
 	if score == 4:
 		current_script = file_paths.find("res://Script/epilogue.txt")
+	if end_flag:
+		_set_end()
+		return
+		
 	if lock:
 		return
 	
@@ -134,6 +142,11 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 					parts = line.split(":", false, 1)
 					item_path = parts[1].strip_edges().to_lower()
 					_set_item("res://UI/" + item_path)
+					
+				elif line.to_lower().begins_with("!end"):
+					end_flag = true
+					text_flag = true
+					
 					
 				elif ":" in line:
 					parts = line.split(":", false, 1)
@@ -214,3 +227,8 @@ func _set_item(item_path: String):
 		get_tree().root.add_child(instance_item)
 	
 	instance_item.set_image(item_path)
+	
+func _set_end():
+	if instance_end == null:
+		instance_end = end_ui.instantiate()
+		get_tree().root.add_child(instance_end)
