@@ -2,24 +2,44 @@ extends Camera3D
 
 @export var player: CharacterBody3D
 @export var target: Node3D
-@export var offset = Vector3(0, 1, -1)
-@export var smooth_speed = 100.0
-@export var mode: int = 0
+@export var offset = Vector3(0, 2, -2)
+@export var smooth_speed = 10.0
+@export var mode = 0  # 0 = player, 1 = target
 
-var desired_position: Vector3
+@onready var raycast: RayCast3D = $RayCast3D
 
-#This is fucking ugly --- FIX LATER
+func _ready():
+	if player:
+		raycast.add_exception(player)
+
 func _process(delta: float) -> void:
+	var focus_point: Vector3
+
+	#Sets up mode
 	if mode == 0:
-		if !player:
-			return
-		desired_position = player.global_transform.origin
-			
-	
-	if mode == 1:
-		if !target:
-			return
-		desired_position = target.global_transform.origin
-			
-	global_transform.origin = global_transform.origin.move_toward(desired_position + offset, smooth_speed * delta)
-	look_at(desired_position, Vector3.UP)
+		if !player: return
+		focus_point = player.global_position
+	elif mode == 1:
+		if !target: return
+		focus_point = target.global_position
+	else:
+		return
+
+	# Desired camera position
+	var desired_camera_pos = focus_point + offset
+
+	#Ray casting Stuff
+	raycast.global_position = focus_point
+	raycast.target_position = raycast.to_local(desired_camera_pos)  # Convert world to local (THIS LINE TOOK ME 1 HOUR TO FIX!!!)
+	raycast.force_raycast_update()
+
+	var final_camera_pos = desired_camera_pos
+
+	if raycast.is_colliding():
+		final_camera_pos = raycast.get_collision_point() - (desired_camera_pos - focus_point).normalized() * 0.1
+
+	# Smooth camera movement
+	global_position = global_position.move_toward(final_camera_pos, smooth_speed * delta)
+
+	# Look at the focus point
+	look_at(focus_point, Vector3.UP)

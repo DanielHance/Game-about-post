@@ -59,10 +59,10 @@ func _show_next_line():
 	name_lable.add_theme_font_override("normal_font", defult_font)
 	if name.to_lower() == "player":
 		portrait.texture = empty_texture
-		name = player_name
+		name = ""
 	elif name.to_lower() == "think":
 		portrait.texture = empty_texture
-		name = "Thinking"
+		name = ""
 		text_lable.add_theme_font_override("normal_font", thinking_font)
 		name_lable.add_theme_font_override("normal_font", thinking_font)
 	else:
