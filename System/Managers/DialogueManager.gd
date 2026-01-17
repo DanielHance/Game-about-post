@@ -8,6 +8,7 @@ var instance_ui
 var instance_button
 var instance_item
 var instance_end
+var mapManagerPointer = null
 
 var file_paths = [
 		"res://Script/prolog.txt",
@@ -59,6 +60,9 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 	player_name = player_name_local
 	print("Start")
 	print("Script = ", current_script)
+	
+	if mapManagerPointer:
+		mapManagerPointer.smart_map("lighthouse", true)
 	
 	#TEMP - Chage later :D
 	if score == 4:

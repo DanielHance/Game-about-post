@@ -204,6 +204,7 @@ autoplay = "Idle"
 
 [node name="Ghosts" type="Node3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -9.09631, 0.359957, 7.93199)
+visible = false
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Ghosts"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59858, 0.0448908, -1.0668)
