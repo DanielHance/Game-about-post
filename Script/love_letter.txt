@@ -4,11 +4,13 @@ Boss : “That letter is addressed to a lovely lady whose usually strolling roun
 Boss : “Ya can’t miss her she’s usually wearing a pink top and blue jeans.”
 Boss : “I’ll see ya back here once ya done.”
 Think : Now's your chance to explore and get to talk to some locals.
+item : Letter.png
 
 !choice : Drop = 1, Lady = 2, Guy = 3
 
 !branch - 1
 #[Discard letter]
+item : null
 Think : You throw away the letter, letting it drift silently to never be seen again.
 Think : But what is that teary sound nearby?
 Think : A guy is crying on the street.
@@ -36,6 +38,7 @@ Boss : “I’m glad for her. Good job.”
 
 !branch - 2
 #[Player delivers the letter to the lady]
+item : null
 Lady : “Why thank you.”
 Think : She opens the letter, delighted by the contents.
 Lady : “Oh wow, you must wait here a second so I can write a reply.”
@@ -59,6 +62,7 @@ Boss : “We really do make dreams come true here. Good job.”
 
 !branch - 3
 #[Player talks to the letters sender]
+item : null
 Guy : “Heya, I heard you were delivering letters.”
 Think : You nod.
 Guy : “I sent a letter a while ago.”
