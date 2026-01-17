@@ -1,22 +1,32 @@
-[gd_scene load_steps=69 format=3 uid="uid://dhyy1nuvvpimk"]
+[gd_scene load_steps=79 format=3 uid="uid://dhyy1nuvvpimk"]
 
 [ext_resource type="ArrayMesh" uid="uid://cgtdb13q625g1" path="res://Objects/3D Models/Models/Buildings/MailCentre.obj" id="1_h2i6u"]
 [ext_resource type="ArrayMesh" uid="uid://tn2p5qpjss7l" path="res://Objects/3D Models/Models/Buildings/LightHouse.obj" id="2_6sxhy"]
+[ext_resource type="Material" uid="uid://bxtifeikmngb2" path="res://Objects/3D Models/Materials/MAT_Wood1_Window.tres" id="2_iskq8"]
+[ext_resource type="Material" uid="uid://77suyjngxo8n" path="res://Objects/3D Models/Materials/MAT_MailCentre.tres" id="3_edt1c"]
 [ext_resource type="ArrayMesh" uid="uid://b43ur6iwatuo7" path="res://Objects/3D Models/Models/Buildings/House1.obj" id="3_mde35"]
+[ext_resource type="Material" uid="uid://chhr7tk3rf4r" path="res://Objects/3D Models/Materials/MAT_BlueTiles.tres" id="4_5u6sv"]
 [ext_resource type="ArrayMesh" uid="uid://e7lx8b04k24t" path="res://Objects/3D Models/Models/Buildings/VampireManor.obj" id="4_bv2ho"]
 [ext_resource type="ArrayMesh" uid="uid://xisydeg56pwf" path="res://Objects/3D Models/Models/Props/PartyFlags.obj" id="5_byarb"]
 [ext_resource type="ArrayMesh" uid="uid://byyjwi5h1f86" path="res://Objects/3D Models/Models/Props/HeadStone_Damaged.obj" id="6_eid5o"]
+[ext_resource type="Material" uid="uid://k78fw2n2df5q" path="res://Objects/3D Models/Materials/MAT_LightHouse.tres" id="6_hoxad"]
+[ext_resource type="Material" uid="uid://b8whrv144qdwd" path="res://Objects/3D Models/Materials/MAT_Wood2.tres" id="7_66igf"]
 [ext_resource type="ArrayMesh" uid="uid://duqhyer4eleg8" path="res://Objects/3D Models/Models/Props/HeadStone_Grand.obj" id="7_nuiy5"]
 [ext_resource type="ArrayMesh" uid="uid://cbd27tfo0574c" path="res://Objects/3D Models/Models/Props/HeadStone_Pristine.obj" id="8_612sw"]
 [ext_resource type="ArrayMesh" uid="uid://bvurcfcjlftnm" path="res://Objects/3D Models/Models/Props/PunchBowl.obj" id="9_cbvpn"]
+[ext_resource type="Material" uid="uid://c3x1kypmui7g8" path="res://Objects/3D Models/Materials/MAT_Houses.tres" id="9_kjgdk"]
+[ext_resource type="Material" uid="uid://dkxt4xjfrq2hk" path="res://Objects/3D Models/Materials/MAT_RedTiles.tres" id="10_05rmm"]
 [ext_resource type="ArrayMesh" uid="uid://5gdwsfxrtvam" path="res://Objects/3D Models/Models/Props/PartyLight.obj" id="10_fufx5"]
 [ext_resource type="ArrayMesh" uid="uid://cqgcrulquim7n" path="res://Objects/3D Models/Models/Props/Cup.obj" id="11_dqlq6"]
 [ext_resource type="ArrayMesh" uid="uid://cdmq2eiudqpmg" path="res://Objects/3D Models/Models/Props/StonePillar.obj" id="12_wb81l"]
 [ext_resource type="ArrayMesh" uid="uid://ck1gwm8bl57wa" path="res://Objects/3D Models/Models/Props/MetalFence.obj" id="13_lt8tx"]
 [ext_resource type="ArrayMesh" uid="uid://cmtkbpnpghwyh" path="res://Objects/3D Models/Models/Buildings/FarmHouse.obj" id="14_iskq8"]
+[ext_resource type="Material" uid="uid://hm6ry56dbbb1" path="res://Objects/3D Models/Materials/MAT_HeadStones.tres" id="14_yv5m6"]
 [ext_resource type="ArrayMesh" uid="uid://duuxkcxfeemvh" path="res://Objects/3D Models/Models/Buildings/House2.obj" id="15_6sxhy"]
 [ext_resource type="ArrayMesh" uid="uid://d4ahpgfl3c0i1" path="res://Objects/3D Models/Models/Props/Table.obj" id="16_mde35"]
 [ext_resource type="ArrayMesh" uid="uid://bn70vmecdb6i2" path="res://Objects/3D Models/Models/Props/WoodenFence.obj" id="17_bv2ho"]
+[ext_resource type="Material" uid="uid://dycy367ovn53n" path="res://Objects/3D Models/Materials/MAT_PartySet.tres" id="18_i4ux1"]
+[ext_resource type="Material" uid="uid://bhm5mvfm88n2j" path="res://Objects/3D Models/Materials/MAT_Corn.tres" id="24_n8aeu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_byarb"]
 
@@ -248,6 +258,9 @@ shape = SubResource("BoxShape3D_bwha0")
 [node name="MailCentre" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.00897093, 0, 0.99996, 0, 1, 0, -0.99996, 0, 0.00897093, 13.9731, 1.96861, -3.81356)
 mesh = ExtResource("1_h2i6u")
+surface_material_override/0 = ExtResource("2_iskq8")
+surface_material_override/1 = ExtResource("3_edt1c")
+surface_material_override/2 = ExtResource("4_5u6sv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MailCentre"]
 
@@ -257,6 +270,9 @@ shape = SubResource("ConcavePolygonShape3D_6sxhy")
 [node name="LightHouse" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.025985, 0, 0.999662, 0, 1, 0, -0.999662, 0, -0.025985, 12.2416, 7.88675, 6.33789)
 mesh = ExtResource("2_6sxhy")
+surface_material_override/0 = ExtResource("6_hoxad")
+surface_material_override/1 = ExtResource("7_66igf")
+surface_material_override/2 = ExtResource("4_5u6sv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LightHouse"]
 
@@ -266,6 +282,10 @@ shape = SubResource("ConcavePolygonShape3D_bv2ho")
 [node name="House1" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.0280437, 0, 0.999607, 0, 1, 0, -0.999607, 0, -0.0280437, -2.86058, 1.80061, 7.90495)
 mesh = ExtResource("3_mde35")
+surface_material_override/0 = ExtResource("9_kjgdk")
+surface_material_override/1 = ExtResource("2_iskq8")
+surface_material_override/2 = ExtResource("7_66igf")
+surface_material_override/3 = ExtResource("4_5u6sv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House1"]
 
@@ -275,6 +295,10 @@ shape = SubResource("ConcavePolygonShape3D_byarb")
 [node name="House0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0884597, 0, 0.99608, 0, 1, 0, -0.99608, 0, 0.0884597, -0.101418, 1.80061, -1.30063)
 mesh = ExtResource("3_mde35")
+surface_material_override/0 = ExtResource("9_kjgdk")
+surface_material_override/1 = ExtResource("2_iskq8")
+surface_material_override/2 = ExtResource("7_66igf")
+surface_material_override/3 = ExtResource("10_05rmm")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House0"]
 
@@ -284,6 +308,10 @@ shape = SubResource("ConcavePolygonShape3D_eid5o")
 [node name="House8" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.169384, 0, 0.98555, 0, 1, 0, -0.98555, 0, -0.169384, 21.8979, 3.33613, -0.0341638)
 mesh = ExtResource("3_mde35")
+surface_material_override/0 = ExtResource("9_kjgdk")
+surface_material_override/1 = ExtResource("2_iskq8")
+surface_material_override/2 = ExtResource("7_66igf")
+surface_material_override/3 = ExtResource("4_5u6sv")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House8"]
 
@@ -293,6 +321,10 @@ shape = SubResource("ConcavePolygonShape3D_eid5o")
 [node name="VampireManor" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.0472808, 0, 0.998882, 0, 1, 0, -0.998882, 0, -0.0472808, -9.73316, 4.16036, 4.39018)
 mesh = ExtResource("4_bv2ho")
+surface_material_override/0 = ExtResource("2_iskq8")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("7_66igf")
+surface_material_override/3 = ExtResource("10_05rmm")
 
 [node name="PartyStuff" type="MeshInstance3D" parent="VampireManor"]
 
@@ -335,6 +367,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3255, 0, 0)
 transform = Transform3D(-0.00617838, 0, 0.999981, 0, 1, 0, -0.999981, 0, -0.00617838, -0.916225, 0.53583, 0.366009)
 mesh = ExtResource("6_eid5o")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStoneDamaged"]
 
@@ -345,6 +378,7 @@ shape = SubResource("ConcavePolygonShape3D_612sw")
 transform = Transform3D(0.477374, 0, -0.8787, 0, 1, 0, 0.8787, 0, 0.477374, 1.30491, 0.505925, 0.555969)
 mesh = ExtResource("7_nuiy5")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStoneGrand"]
 
@@ -353,8 +387,10 @@ shape = SubResource("ConcavePolygonShape3D_cbvpn")
 
 [node name="HeadStonePristine" type="MeshInstance3D" parent="Graveyard"]
 transform = Transform3D(0.400077, 0, 0.916481, 0, 1, 0, -0.916481, 0, 0.400077, -1.00476, 0.43303, -4.12448)
+material_override = ExtResource("14_yv5m6")
 mesh = ExtResource("8_612sw")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStonePristine"]
 
@@ -365,6 +401,7 @@ shape = SubResource("ConcavePolygonShape3D_fufx5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0565414, 0.488099, -0.313251)
 mesh = ExtResource("7_nuiy5")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStoneGrand2"]
 
@@ -375,6 +412,7 @@ shape = SubResource("ConcavePolygonShape3D_dqlq6")
 transform = Transform3D(0.999827, 0, -0.0185867, 0, 1, 0, 0.0185867, 0, 0.999827, -1.70646, 0, -1.3416)
 mesh = ExtResource("6_eid5o")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStoneDamaged2"]
 
@@ -385,6 +423,7 @@ shape = SubResource("ConcavePolygonShape3D_wb81l")
 transform = Transform3D(-0.552301, 0, 0.833645, 0, 1, 0, -0.833645, 0, -0.552301, 2.92287, 2.38419e-07, -1.60157)
 mesh = ExtResource("7_nuiy5")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStoneGrand3"]
 
@@ -395,6 +434,7 @@ shape = SubResource("ConcavePolygonShape3D_lt8tx")
 transform = Transform3D(-0.00617838, 0, 0.999981, 0, 1, 0, -0.999981, 0, -0.00617838, 1.1499, 0.53583, -0.929036)
 mesh = ExtResource("6_eid5o")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStoneDamaged3"]
 
@@ -405,6 +445,7 @@ shape = SubResource("ConcavePolygonShape3D_iskq8")
 transform = Transform3D(-0.00617196, 0.0455896, 0.998941, 0.00028167, 0.99896, -0.0455888, -0.999981, 0, -0.00617838, 3.04141, 0.53583, 0.514715)
 mesh = ExtResource("6_eid5o")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStoneDamaged5"]
 
@@ -415,6 +456,7 @@ shape = SubResource("ConcavePolygonShape3D_edt1c")
 transform = Transform3D(0.477374, 0, -0.8787, 0, 1, 0, 0.8787, 0, 0.477374, 4.24715, 0.505925, -0.739076)
 mesh = ExtResource("7_nuiy5")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStoneGrand4"]
 
@@ -425,6 +467,7 @@ shape = SubResource("ConcavePolygonShape3D_5u6sv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8857, 0.488099, -3.02374)
 mesh = ExtResource("7_nuiy5")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStoneGrand5"]
 
@@ -435,6 +478,7 @@ shape = SubResource("ConcavePolygonShape3D_hoxad")
 transform = Transform3D(0.80696, 0, 0.590606, 0, 1, 0, -0.590606, 0, 0.80696, 0.0608788, 0.513262, -2.63665)
 mesh = ExtResource("6_eid5o")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStoneDamaged4"]
 
@@ -449,56 +493,67 @@ skeleton = NodePath("../HeadStoneGrand6")
 transform = Transform3D(-0.552301, 0, -0.833645, 0, 1, 0, 0.833645, 0, -0.552301, 3.79936, -0.273816, -2.4302)
 mesh = ExtResource("9_cbvpn")
 skeleton = NodePath("../../HeadStoneGrand6")
+surface_material_override/0 = ExtResource("18_i4ux1")
 
 [node name="PartyFlags" type="MeshInstance3D" parent="Graveyard/RaveGear"]
 transform = Transform3D(-0.552301, 0, -0.833645, 0, 1, 0, 0.833645, 0, -0.552301, 3.56937, -0.411007, -4.84775)
 mesh = ExtResource("5_byarb")
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("18_i4ux1")
 
 [node name="PartyFlags2" type="MeshInstance3D" parent="Graveyard/RaveGear"]
 transform = Transform3D(0.708894, 0, -0.705315, 0, 1, 0, 0.705315, 0, 0.708894, 0.199324, -0.411007, -3.77907)
 mesh = ExtResource("5_byarb")
 skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("18_i4ux1")
 
 [node name="PartyLight" type="MeshInstance3D" parent="Graveyard/RaveGear"]
-transform = Transform3D(0.242599, 0, 0.970127, 0, 1, 0, -0.970127, 0, 0.242599, 2.1317, -0.127, -2.57094)
+transform = Transform3D(-0.204803, 0, -0.978804, 0, 1, 0, 0.978804, 0, -0.204803, 2.1317, -0.127, -2.57094)
 mesh = ExtResource("10_fufx5")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("18_i4ux1")
 
 [node name="PartyLight2" type="MeshInstance3D" parent="Graveyard/RaveGear"]
-transform = Transform3D(0.242599, 0, 0.970127, 0, 1, 0, -0.970127, 0, 0.242599, 3.0243, -0.127, -2.78645)
+transform = Transform3D(-0.161311, 0, -0.986904, 0, 1, 0, 0.986904, 0, -0.161311, 3.0243, -0.127, -2.78645)
 mesh = ExtResource("10_fufx5")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("18_i4ux1")
 
 [node name="Cup" type="MeshInstance3D" parent="Graveyard/RaveGear"]
 transform = Transform3D(-0.552301, 0, -0.833645, 0, 1, 0, 0.833645, 0, -0.552301, 1.89808, -0.299357, -1.15616)
 mesh = ExtResource("11_dqlq6")
 skeleton = NodePath("../../../VampireManor")
+surface_material_override/0 = ExtResource("18_i4ux1")
 
 [node name="Cup4" type="MeshInstance3D" parent="Graveyard/RaveGear"]
 transform = Transform3D(-0.552301, 0, -0.833645, 0, 1, 0, 0.833645, 0, -0.552301, 1.04621, -0.299357, -1.72054)
 mesh = ExtResource("11_dqlq6")
 skeleton = NodePath("../../../VampireManor")
+surface_material_override/0 = ExtResource("18_i4ux1")
 
 [node name="Cup5" type="MeshInstance3D" parent="Graveyard/RaveGear"]
 transform = Transform3D(-0.552301, 0, -0.833645, 0, 1, 0, 0.833645, 0, -0.552301, 1.2574, -0.299357, -1.20192)
 mesh = ExtResource("11_dqlq6")
 skeleton = NodePath("../../../VampireManor")
+surface_material_override/0 = ExtResource("18_i4ux1")
 
 [node name="Cup2" type="MeshInstance3D" parent="Graveyard/RaveGear"]
 transform = Transform3D(-0.00282432, -0.552293, -0.833645, -0.999987, 0.00511375, -1.49012e-08, 0.00426302, 0.833634, -0.552301, 2.20312, -0.291142, -1.61659)
 mesh = ExtResource("11_dqlq6")
 skeleton = NodePath("../../../VampireManor")
+surface_material_override/0 = ExtResource("18_i4ux1")
 
 [node name="Cup3" type="MeshInstance3D" parent="Graveyard/RaveGear"]
 transform = Transform3D(0.00301787, 0.590147, -0.80729, -0.999987, 0.00511375, -1.50799e-08, 0.00412826, 0.807279, 0.590155, 1.53771, -0.291142, -2.01577)
 mesh = ExtResource("11_dqlq6")
 skeleton = NodePath("../../../VampireManor")
+surface_material_override/0 = ExtResource("18_i4ux1")
 
 [node name="HeadStoneGrand6" type="MeshInstance3D" parent="Graveyard"]
 transform = Transform3D(-0.552301, 0, 0.833645, 0, 1, 0, -0.833645, 0, -0.552301, 4.02678, 0.411007, -2.25251)
 mesh = ExtResource("7_nuiy5")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("14_yv5m6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Graveyard/HeadStoneGrand6"]
 
@@ -658,6 +713,11 @@ shape = SubResource("ConcavePolygonShape3D_glste")
 [node name="FarmHouse" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.0190928, 0, 0.999818, 0, 1, 0, -0.999818, 0, -0.0190928, 7.56285, 2.36956, -3.96168)
 mesh = ExtResource("14_iskq8")
+surface_material_override/0 = ExtResource("4_5u6sv")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("2_iskq8")
+surface_material_override/3 = ExtResource("7_66igf")
+surface_material_override/4 = ExtResource("24_n8aeu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="FarmHouse"]
 
@@ -667,6 +727,11 @@ shape = SubResource("ConcavePolygonShape3D_vfdj5")
 [node name="FarmHouse2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.999959, 0, -0.00911054, 0, 1, 0, 0.00911054, 0, 0.999959, -15.7364, 2.36956, -12.2981)
 mesh = ExtResource("14_iskq8")
+surface_material_override/0 = ExtResource("10_05rmm")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("2_iskq8")
+surface_material_override/3 = ExtResource("7_66igf")
+surface_material_override/4 = ExtResource("24_n8aeu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="FarmHouse2"]
 
@@ -676,6 +741,11 @@ shape = SubResource("ConcavePolygonShape3D_skbth")
 [node name="FarmHouse3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.0499655, 0, 0.998751, 0, 1, 0, -0.998751, 0, -0.0499655, 23.4658, 3.25765, -12.2981)
 mesh = ExtResource("14_iskq8")
+surface_material_override/0 = ExtResource("10_05rmm")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("2_iskq8")
+surface_material_override/3 = ExtResource("7_66igf")
+surface_material_override/4 = ExtResource("24_n8aeu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="FarmHouse3"]
 
@@ -685,6 +755,11 @@ shape = SubResource("ConcavePolygonShape3D_skbth")
 [node name="FarmHouse4" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.0499655, 0, 0.998751, 0, 1, 0, -0.998751, 0, -0.0499655, 1.90711, 3.25765, 15.588)
 mesh = ExtResource("14_iskq8")
+surface_material_override/0 = ExtResource("10_05rmm")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("2_iskq8")
+surface_material_override/3 = ExtResource("7_66igf")
+surface_material_override/4 = ExtResource("24_n8aeu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="FarmHouse4"]
 
@@ -694,6 +769,11 @@ shape = SubResource("ConcavePolygonShape3D_skbth")
 [node name="FarmHouse5" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.996814, 0, 0.079764, 0, 1, 0, -0.079764, 0, 0.996814, -15.2335, 3.25765, 13.9745)
 mesh = ExtResource("14_iskq8")
+surface_material_override/0 = ExtResource("4_5u6sv")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("2_iskq8")
+surface_material_override/3 = ExtResource("7_66igf")
+surface_material_override/4 = ExtResource("24_n8aeu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="FarmHouse5"]
 
@@ -703,6 +783,10 @@ shape = SubResource("ConcavePolygonShape3D_skbth")
 [node name="House2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0493204, 0, 0.998783, 0, 1, 0, -0.998783, 0, 0.0493204, 5.08646, 1.65387, 8.24394)
 mesh = ExtResource("15_6sxhy")
+surface_material_override/0 = ExtResource("2_iskq8")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("10_05rmm")
+surface_material_override/3 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House2"]
 
@@ -712,6 +796,10 @@ shape = SubResource("ConcavePolygonShape3D_2fer2")
 [node name="House3" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0164926, 0, 0.999864, 0, 1, 0, -0.999864, 0, 0.0164926, -6.76479, 1.70032, -6.1962)
 mesh = ExtResource("15_6sxhy")
+surface_material_override/0 = ExtResource("2_iskq8")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("4_5u6sv")
+surface_material_override/3 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House3"]
 
@@ -721,6 +809,10 @@ shape = SubResource("ConcavePolygonShape3D_wf2ag")
 [node name="House4" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0164926, 0, 0.999864, 0, 1, 0, -0.999864, 0, 0.0164926, 1.80243, 1.70032, -13.4197)
 mesh = ExtResource("15_6sxhy")
+surface_material_override/0 = ExtResource("2_iskq8")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("4_5u6sv")
+surface_material_override/3 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House4"]
 
@@ -730,6 +822,10 @@ shape = SubResource("ConcavePolygonShape3D_1jcw7")
 [node name="House5" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0164926, 0, 0.999864, 0, 1, 0, -0.999864, 0, 0.0164926, 5.37202, 1.70032, -13.4197)
 mesh = ExtResource("15_6sxhy")
+surface_material_override/0 = ExtResource("2_iskq8")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("10_05rmm")
+surface_material_override/3 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House5"]
 
@@ -739,6 +835,10 @@ shape = SubResource("ConcavePolygonShape3D_1jcw7")
 [node name="House6" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.759237, 0, 0.650814, 0, 1, 0, -0.650814, 0, -0.759237, 23.4995, 2.45088, -5.68769)
 mesh = ExtResource("15_6sxhy")
+surface_material_override/0 = ExtResource("2_iskq8")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("4_5u6sv")
+surface_material_override/3 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House6"]
 
@@ -748,6 +848,10 @@ shape = SubResource("ConcavePolygonShape3D_1jcw7")
 [node name="House7" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.759237, 0, 0.650814, 0, 1, 0, -0.650814, 0, -0.759237, 21.7202, 2.38087, 11.4744)
 mesh = ExtResource("15_6sxhy")
+surface_material_override/0 = ExtResource("2_iskq8")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("10_05rmm")
+surface_material_override/3 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House7"]
 
@@ -757,6 +861,10 @@ shape = SubResource("ConcavePolygonShape3D_1jcw7")
 [node name="House9" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.169384, 0, 0.98555, 0, 1, 0, -0.98555, 0, -0.169384, -22.5211, 3.33613, 1.96125)
 mesh = ExtResource("3_mde35")
+surface_material_override/0 = ExtResource("9_kjgdk")
+surface_material_override/1 = ExtResource("2_iskq8")
+surface_material_override/2 = ExtResource("7_66igf")
+surface_material_override/3 = ExtResource("10_05rmm")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House9"]
 
@@ -766,6 +874,10 @@ shape = SubResource("ConcavePolygonShape3D_eid5o")
 [node name="House12" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.169384, 0, 0.98555, 0, 1, 0, -0.98555, 0, -0.169384, -22.2608, 3.33613, -13.3786)
 mesh = ExtResource("3_mde35")
+surface_material_override/0 = ExtResource("9_kjgdk")
+surface_material_override/1 = ExtResource("2_iskq8")
+surface_material_override/2 = ExtResource("7_66igf")
+surface_material_override/3 = ExtResource("10_05rmm")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House12"]
 
@@ -775,6 +887,10 @@ shape = SubResource("ConcavePolygonShape3D_eid5o")
 [node name="House10" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.533792, 0, 0.845616, 0, 1, 0, -0.845616, 0, 0.533792, -23.0824, 2.45088, -5.68769)
 mesh = ExtResource("15_6sxhy")
+surface_material_override/0 = ExtResource("2_iskq8")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("4_5u6sv")
+surface_material_override/3 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House10"]
 
@@ -784,6 +900,10 @@ shape = SubResource("ConcavePolygonShape3D_1jcw7")
 [node name="House11" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.74402, 0, 0.668157, 0, 1, 0, -0.668157, 0, 0.74402, -21.8152, 2.38087, 11.4744)
 mesh = ExtResource("15_6sxhy")
+surface_material_override/0 = ExtResource("2_iskq8")
+surface_material_override/1 = ExtResource("9_kjgdk")
+surface_material_override/2 = ExtResource("4_5u6sv")
+surface_material_override/3 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House11"]
 
@@ -793,6 +913,7 @@ shape = SubResource("ConcavePolygonShape3D_1jcw7")
 [node name="Table" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2442, 0.129443, -10.9419)
 mesh = ExtResource("16_mde35")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Table"]
 
@@ -802,6 +923,7 @@ shape = SubResource("ConcavePolygonShape3D_3sw53")
 [node name="Table2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.822253, 0, -0.569122, 0, 1, 0, 0.569122, 0, 0.822253, 13.7181, 0.262513, -10.8608)
 mesh = ExtResource("16_mde35")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Table2"]
 
@@ -811,6 +933,7 @@ shape = SubResource("ConcavePolygonShape3D_t1mka")
 [node name="Table3" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.879507, 0, 0.475885, 0, 1, 0, -0.475885, 0, 0.879507, 14.996, 0.0713997, -13.5926)
 mesh = ExtResource("16_mde35")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Table3"]
 
@@ -820,6 +943,7 @@ shape = SubResource("ConcavePolygonShape3D_of1tm")
 [node name="WoodenFence" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8732, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence"]
 
@@ -829,6 +953,7 @@ shape = SubResource("ConcavePolygonShape3D_s7e54")
 [node name="WoodenFence2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.382, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence2"]
 
@@ -838,6 +963,7 @@ shape = SubResource("ConcavePolygonShape3D_s7e54")
 [node name="WoodenFence3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.847, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence3"]
 
@@ -847,6 +973,7 @@ shape = SubResource("ConcavePolygonShape3D_s7e54")
 [node name="WoodenFence4" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.35581, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence4"]
 
@@ -856,6 +983,7 @@ shape = SubResource("ConcavePolygonShape3D_s7e54")
 [node name="WoodenFence5" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79844, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence5"]
 
@@ -865,6 +993,7 @@ shape = SubResource("ConcavePolygonShape3D_s7e54")
 [node name="WoodenFence6" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.307268, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence6"]
 
@@ -874,6 +1003,7 @@ shape = SubResource("ConcavePolygonShape3D_s7e54")
 [node name="WoodenFence7" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2278, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence7"]
 
@@ -883,6 +1013,7 @@ shape = SubResource("ConcavePolygonShape3D_s7e54")
 [node name="WoodenFence8" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.71897, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence8"]
 
@@ -892,6 +1023,7 @@ shape = SubResource("ConcavePolygonShape3D_s7e54")
 [node name="WoodenFence9" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2858, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence9"]
 
@@ -901,6 +1033,7 @@ shape = SubResource("ConcavePolygonShape3D_s7e54")
 [node name="WoodenFence10" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7769, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence10"]
 
@@ -910,6 +1043,7 @@ shape = SubResource("ConcavePolygonShape3D_s7e54")
 [node name="WoodenFence11" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.312, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence11"]
 
@@ -919,6 +1053,7 @@ shape = SubResource("ConcavePolygonShape3D_s7e54")
 [node name="WoodenFence12" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8032, 0.526997, -17.7414)
 mesh = ExtResource("17_bv2ho")
+surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFence12"]
 
