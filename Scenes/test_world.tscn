@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://dhyy1nuvvpimk"]
+[gd_scene load_steps=80 format=3 uid="uid://dhyy1nuvvpimk"]
 
 [ext_resource type="ArrayMesh" uid="uid://cgtdb13q625g1" path="res://Objects/3D Models/Models/Buildings/MailCentre.obj" id="1_h2i6u"]
 [ext_resource type="ArrayMesh" uid="uid://tn2p5qpjss7l" path="res://Objects/3D Models/Models/Buildings/LightHouse.obj" id="2_6sxhy"]
@@ -37,6 +37,8 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rq1x1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iskq8"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mde35"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
@@ -232,6 +234,7 @@ shape = SubResource("ConcavePolygonShape3D_ajhdr")
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(19.847, 0, 0, 0, 6.95197, 0, 0, 0, 14.1251, -0.00191879, 0.0713997, -3.82725)
 mesh = SubResource("PlaneMesh_rq1x1")
+surface_material_override/0 = SubResource("StandardMaterial3D_iskq8")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
 
