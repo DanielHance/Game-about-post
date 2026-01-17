@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://oojiep4uxqj1"]
+
+[ext_resource type="Script" uid="uid://hi57lnm520v" path="res://Script/item_ui.gd" id="1_0ievn"]
+[ext_resource type="Texture2D" uid="uid://cgr3xmgqhud7" path="res://UI/ItemFrame.png" id="2_3ebgk"]
+
+[node name="Item_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(-5, 0)
+script = ExtResource("1_0ievn")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -35.0
+offset_top = -69.0
+offset_right = 35.0
+offset_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource("2_3ebgk")
+
+[node name="ItemRect" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 68.0

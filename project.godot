@@ -20,6 +20,12 @@ config/icon="res://Assets/Icons/icon.svg"
 
 DialogueManager="*res://System/Managers/DialogueManager.gd"
 
+[display]
+
+window/size/initial_position_type=3
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
+
 [input]
 
 move_up={

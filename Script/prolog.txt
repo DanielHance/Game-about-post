@@ -1,5 +1,6 @@
 #[Map is locked of all interactions except with the boss who stands before the player outside the mail center]
 !Branch - 0
+!item : null
 Boss : “Glad you’re awake, kid.”
 Boss : “I found ya passed out on some old letters I was meant to deliver last week.”
 Boss : “So where are ya from?”

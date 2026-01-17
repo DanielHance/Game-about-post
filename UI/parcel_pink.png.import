@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dic7uufr13onh"
-path="res://.godot/imported/parcel fragile.png-8001e64265dbfd8021dcf1f931752ed2.ctex"
+uid="uid://cxuct11vyb2b0"
+path="res://.godot/imported/parcel_pink.png-76ecf83917bf3b09fb99071796560af3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/parcel fragile.png"
-dest_files=["res://.godot/imported/parcel fragile.png-8001e64265dbfd8021dcf1f931752ed2.ctex"]
+source_file="res://UI/parcel_pink.png"
+dest_files=["res://.godot/imported/parcel_pink.png-76ecf83917bf3b09fb99071796560af3.ctex"]
 
 [params]
 

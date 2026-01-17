@@ -1,13 +1,17 @@
-extends CanvasLayer
+extends Control
 
-@onready var portrait = $"Control/Panel/NPC Portrait"
-@onready var name_lable = $"Control/Text background/NPC Name"
-@onready var text_lable = $"Control/Text background/Dialogue"
-@onready var next_button = $"Control/Text background/Next Button"
+@onready var portrait = $"Panel/AspectRatioContainer/NPC Portrait"
+@onready var name_lable = $"Text background/NPC Name"
+@onready var text_lable = $"Text background/Dialogue"
+@onready var next_button = $"Text background/Next Button"
 @onready var text_sound: AudioStreamPlayer2D = $"Text Sound"
 
+var defult_font = preload("res://UI/PTSerif-Regular.ttf")
+var thinking_font = preload("res://UI/PTSerif-Italic.ttf")
+
+
 #Pre-load font and stuff
-var empty_texture: Texture =  preload("res://Objects/Other/transparent_texture.png")
+var empty_texture: Texture =  null
 var npc_texture
 var player_name
 var NPC_name
@@ -51,12 +55,16 @@ func _show_next_line():
 	var name = temp[0].strip_edges()
 	var body = temp[1].strip_edges()
 	
+	text_lable.add_theme_font_override("normal_font", defult_font)
+	name_lable.add_theme_font_override("normal_font", defult_font)
 	if name.to_lower() == "player":
 		portrait.texture = empty_texture
 		name = player_name
 	elif name.to_lower() == "think":
 		portrait.texture = empty_texture
-		name = "CHANGE FONT"
+		name = "Thinking"
+		text_lable.add_theme_font_override("normal_font", thinking_font)
+		name_lable.add_theme_font_override("normal_font", thinking_font)
 	else:
 		portrait.texture = npc_texture
 	
@@ -70,13 +78,6 @@ func _show_next_line():
 	
 	current_line += 1
 	
-func _on_Button_pressed():
-	if is_typing:
-		text_lable.text = letters
-		is_typing = false
-		return
-	_show_next_line()
-
 	
 #Timer that controls speed words appear at
 func _process(delta):
@@ -102,3 +103,11 @@ func _process(delta):
 		
 	if letter_index >= letters.length():
 		is_typing = false
+
+
+func _on_next_button_pressed() -> void:
+	if is_typing:
+		text_lable.text = letters
+		is_typing = false
+		return
+	_show_next_line()

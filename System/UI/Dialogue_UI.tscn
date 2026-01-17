@@ -1,69 +1,86 @@
-[gd_scene load_steps=2 format=3 uid="uid://cp2jjxhypkloa"]
+[gd_scene load_steps=3 format=3 uid="uid://cp2jjxhypkloa"]
 
 [ext_resource type="Script" uid="uid://bvp2112rhgnmo" path="res://System/UI/dialogue_ui.gd" id="1_e03r2"]
+[ext_resource type="Texture2D" uid="uid://cgq1j2sp6m7ms" path="res://UI/NextButton.png" id="2_gx4kk"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
-script = ExtResource("1_e03r2")
-
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(1, 1)
+script = ExtResource("1_e03r2")
 
-[node name="Text background" type="ColorRect" parent="Control"]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_top = 487.0
-offset_right = 1151.0
-offset_bottom = 649.0
+offset_left = -5.0
+offset_top = 1.0
+offset_right = 1153.0
+offset_bottom = 489.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 1155.0
+offset_bottom = 492.0
+
+[node name="NPC Portrait" type="TextureRect" parent="Panel/AspectRatioContainer"]
+layout_mode = 2
+expand_mode = 2
+stretch_mode = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Text background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -160.0
+grow_horizontal = 2
+grow_vertical = 0
 color = Color(0, 0, 0, 1)
 
-[node name="NPC Name" type="Label" parent="Control/Text background"]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 6.0
-offset_right = 169.0
-offset_bottom = 75.0
+[node name="NPC Name" type="Label" parent="Text background"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 517.0
+offset_bottom = -90.0
+grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 
-[node name="Dialogue" type="RichTextLabel" parent="Control/Text background"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 82.0
-offset_right = 1139.0
-offset_bottom = 155.0
+[node name="Dialogue" type="RichTextLabel" parent="Text background"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -93.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/bold_italics_font_size = 20
 theme_override_font_sizes/italics_font_size = 20
 theme_override_font_sizes/mono_font_size = 20
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 20
 
-[node name="Next Button" type="Button" parent="Control/Text background"]
+[node name="Next Button" type="TextureButton" parent="Text background"]
 layout_mode = 0
-offset_left = 1015.0
-offset_top = -59.0
-offset_right = 1147.0
-offset_bottom = -3.0
-
-[node name="Panel" type="Panel" parent="Control"]
-layout_mode = 1
-offset_left = 436.0
-offset_top = 29.0
-offset_right = 788.0
-offset_bottom = 473.0
-
-[node name="NPC Portrait" type="TextureRect" parent="Control/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 3
-stretch_mode = 5
+offset_left = 969.0
+offset_top = -48.0
+offset_right = 1151.0
+offset_bottom = 2.0
+texture_normal = ExtResource("2_gx4kk")
+stretch_mode = 0
 
 [node name="Text Sound" type="AudioStreamPlayer2D" parent="."]
 
-[connection signal="pressed" from="Control/Text background/Next Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Text background/Next Button" to="." method="_on_next_button_pressed"]

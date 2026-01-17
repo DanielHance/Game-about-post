@@ -2,8 +2,10 @@ extends Node
 
 var dialogue_ui = preload("res://System/UI/Dialogue_UI.tscn")
 var button_ui = preload("res://System/UI/buttons_ui.tscn")
+var item_ui = preload("res://Scenes/item_ui.tscn") #Don't know why this is in a diffrent folder :/
 var instance_ui
 var instance_button
+var instance_item
 
 var file_paths = [
 		"res://Script/prolog.txt",
@@ -29,6 +31,8 @@ var text_flag = false
 var NPC_name
 var portrait_path
 var player_name
+
+var item_path
 
 func _ready():
 	for i in range(file_paths.size()):
@@ -120,8 +124,17 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 						line_marker = i
 						print("Locked is on")
 						break
+						
+				#Adds overall score (how many of the quest paths have been completed)
 				elif line.to_lower().begins_with("!score"):
 					score += 1
+				
+				#Check if item need to be added to players hud
+				elif line.to_lower().begins_with("!item"):
+					parts = line.split(":", false, 1)
+					item_path = parts[1].strip_edges().to_lower()
+					_set_item("res://UI/" + item_path)
+					
 				elif ":" in line:
 					parts = line.split(":", false, 1)
 					if parts[0].strip_edges().to_lower() == "player" or parts[0].strip_edges().to_lower() == NPC_name.to_lower() or parts[0].strip_edges().to_lower() == "think":
@@ -194,3 +207,10 @@ func _start_dialogue_buttons(button_lables: Array[String], button_branches: Arra
 	instance_button = button_ui.instantiate()
 	get_tree().root.add_child(instance_button)
 	instance_button.show_buttons(button_lables, button_branches)
+	
+func _set_item(item_path: String):
+	if instance_item == null:
+		instance_item = item_ui.instantiate()
+		get_tree().root.add_child(instance_item)
+	
+	instance_item.set_image(item_path)
