@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ds0sqa6qcgxon"]
+[gd_scene load_steps=6 format=3 uid="uid://ds0sqa6qcgxon"]
 
 [ext_resource type="Texture2D" uid="uid://cohoyx042vgsq" path="res://UI/PlayButton.png" id="1_28flt"]
 [ext_resource type="Script" uid="uid://do4vxyva3hwuu" path="res://System/UI/main_menu.gd" id="1_48xlc"]
-[ext_resource type="Texture2D" uid="uid://dn5vafql2opjp" path="res://UI/PlayButtonHover.png" id="3_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://cgq1j2sp6m7ms" path="res://UI/NextButton.png" id="3_n45e2"]
 [ext_resource type="Texture2D" uid="uid://cnmo7v3wsn7mk" path="res://UI/OptionButton.png" id="4_opfnp"]
 [ext_resource type="Texture2D" uid="uid://dnipcarfwjms4" path="res://UI/QuitButton.png" id="5_cp0ys"]
-[ext_resource type="Texture2D" uid="uid://c45wkvo0gupqc" path="res://UI/OptionButtonHover.png" id="5_yhxw7"]
-[ext_resource type="Texture2D" uid="uid://durevtou2p283" path="res://UI/QuitButtonHover.png" id="7_trj04"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -31,7 +29,7 @@ offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("1_28flt")
-texture_hover = ExtResource("3_cp0ys")
+texture_hover = ExtResource("3_n45e2")
 stretch_mode = 5
 
 [node name="Options" type="TextureButton" parent="."]
@@ -48,7 +46,7 @@ offset_bottom = 35.5
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("4_opfnp")
-texture_hover = ExtResource("5_yhxw7")
+texture_hover = ExtResource("3_n45e2")
 stretch_mode = 5
 
 [node name="Quit" type="TextureButton" parent="."]
@@ -65,7 +63,7 @@ offset_bottom = 115.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("5_cp0ys")
-texture_hover = ExtResource("7_trj04")
+texture_hover = ExtResource("3_n45e2")
 stretch_mode = 5
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

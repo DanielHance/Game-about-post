@@ -1,25 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1xao10f72wr4"]
+[gd_scene load_steps=5 format=3 uid="uid://c1xao10f72wr4"]
 
-[ext_resource type="Texture2D" uid="uid://f2hide4ip230" path="res://Objects/Player/NPCPNGS/LLRPixel.png" id="1_tjx66"]
-[ext_resource type="Texture2D" uid="uid://d2tgyheqnahjc" path="res://Objects/Player/NPCPNGS/LLRIdlePixel.png" id="2_45vwk"]
+[ext_resource type="SpriteFrames" uid="uid://c088estkgpy1u" path="res://Objects/NPC/NPC_test_spritesheet.tres" id="1_dstp1"]
 [ext_resource type="Script" uid="uid://17c55oksfhvr" path="res://Objects/NPC/npc_test.gd" id="2_tjx66"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_r1xwx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_tjx66")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_45vwk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_tjx66")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 3.0
-}]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j1pmc"]
 
@@ -31,12 +13,12 @@ height = 0.792501
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_r1xwx")
-animation = &"Idle"
+sprite_frames = ExtResource("1_dstp1")
+animation = &"idel"
 
 [node name="Area3D" type="Area3D" parent="."]
 script = ExtResource("2_tjx66")
-portrait = "uid://bdrkwherxoyi0"
+portrait = "uid://byw1xfm2qjo1v"
 character_name = "Lady"
 
 [node name="Talkbox" type="CollisionShape3D" parent="Area3D"]

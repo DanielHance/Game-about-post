@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://sjxl8cgxaggn"]
+[gd_scene load_steps=35 format=3 uid="uid://sjxl8cgxaggn"]
 
 [ext_resource type="PackedScene" uid="uid://c4vq270cfcl1x" path="res://Scenes/player.tscn" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dhyy1nuvvpimk" path="res://Scenes/test_world.tscn" id="2_jjvhh"]
@@ -25,7 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://d2tgyheqnahjc" path="res://Objects/Player/NPCPNGS/LLRIdlePixel.png" id="12_6vcvc"]
 [ext_resource type="Texture2D" uid="uid://btjmbo5q0nwll" path="res://Objects/Player/NPCPNGS/LLSPixel.png" id="13_7k868"]
 [ext_resource type="Texture2D" uid="uid://f1y4yjfgarpf" path="res://Objects/Player/NPCPNGS/LLSIdlePixel.png" id="14_hpc6h"]
-[ext_resource type="AudioStream" uid="uid://c728ue0q5redi" path="res://Sound/GameJamMusic.wav" id="26_cbgmd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jkdf5"]
 animations = [{
@@ -168,7 +167,7 @@ animations = [{
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.690152, -0.292047, 6.72623)
 
 [node name="Follow_Camera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_kry3j")]
-transform = Transform3D(-0.99762, 0, 0.0689556, 0, 1, 0, -0.0689556, 0, -0.99762, 13.8901, 1.15662, -4.58401)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44359, 0, 1.79114)
 player = NodePath("../Player")
 
 [node name="Boss" type="Node3D" parent="."]
@@ -300,8 +299,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.87247, 0, -2.838)
 [node name="Label3D" type="Label3D" parent="NPC_Test7"]
 transform = Transform3D(-0.999969, 0, 0.00788886, 0, 1, 0, -0.00788886, 0, -0.999969, 0, 0, -0.255404)
 text = "Vampire"
-
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("26_cbgmd")
-volume_db = 0.654
-autoplay = true

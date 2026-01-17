@@ -1,25 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://fne42dtytsxu"]
+[gd_scene load_steps=5 format=3 uid="uid://fne42dtytsxu"]
 
-[ext_resource type="Texture2D" uid="uid://g5rwmdyg5wac" path="res://Objects/Player/NPCPNGS/LightouseKeeperPixel.png" id="1_cpgr6"]
+[ext_resource type="SpriteFrames" uid="uid://c088estkgpy1u" path="res://Objects/NPC/NPC_test_spritesheet.tres" id="1_fvg0d"]
 [ext_resource type="Script" uid="uid://17c55oksfhvr" path="res://Objects/NPC/npc_test.gd" id="2_cpgr6"]
-[ext_resource type="Texture2D" uid="uid://i0si5j3gwiat" path="res://Objects/Player/NPCPNGS/LKIdlePixel.png" id="2_tn006"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_gsert"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_cpgr6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_tn006")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_cpgr6")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 3.0
-}]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j1pmc"]
 
@@ -31,12 +13,12 @@ height = 0.792501
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_gsert")
-animation = &"Idle"
+sprite_frames = ExtResource("1_fvg0d")
+animation = &"idel"
 
 [node name="Area3D" type="Area3D" parent="."]
 script = ExtResource("2_cpgr6")
-portrait = "uid://bkajynefc304s"
+portrait = "uid://cxycsa4b0cxsx"
 character_name = "Lighthouse Owner"
 
 [node name="Talkbox" type="CollisionShape3D" parent="Area3D"]
