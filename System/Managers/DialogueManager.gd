@@ -151,6 +151,9 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 					end_flag = true
 					text_flag = true
 					
+				elif line.to_lower().begins_with("!map"):
+					parts = line.split
+				
 					
 				elif ":" in line:
 					parts = line.split(":", false, 1)
