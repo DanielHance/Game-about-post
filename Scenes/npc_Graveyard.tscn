@@ -12,7 +12,7 @@ height = 0.792501
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 texture_filter = 0
-animation = &"idel"
+animation = &""
 
 [node name="Area3D" type="Area3D" parent="."]
 script = ExtResource("2_vp3qc")
