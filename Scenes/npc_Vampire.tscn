@@ -1,7 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2pdtp28tngp7"]
+[gd_scene load_steps=7 format=3 uid="uid://d2pdtp28tngp7"]
 
-[ext_resource type="SpriteFrames" uid="uid://c088estkgpy1u" path="res://Objects/NPC/NPC_test_spritesheet.tres" id="1_vmcy1"]
+[ext_resource type="Texture2D" uid="uid://bvgopf81hlens" path="res://Objects/Player/NPCPNGS/VampirePixel.png" id="1_56t7n"]
 [ext_resource type="Script" uid="uid://17c55oksfhvr" path="res://Objects/NPC/npc_test.gd" id="2_56t7n"]
+[ext_resource type="Texture2D" uid="uid://djh5hq08iwcln" path="res://Objects/Player/NPCPNGS/VampireIdlePixel.png" id="2_hsxrc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ili1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_56t7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hsxrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_56t7n")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j1pmc"]
 
@@ -13,8 +31,8 @@ height = 0.792501
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 texture_filter = 0
-sprite_frames = ExtResource("1_vmcy1")
-animation = &"idel"
+sprite_frames = SubResource("SpriteFrames_ili1k")
+animation = &"Idle"
 
 [node name="Area3D" type="Area3D" parent="."]
 script = ExtResource("2_56t7n")

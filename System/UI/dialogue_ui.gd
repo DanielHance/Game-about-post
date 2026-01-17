@@ -6,6 +6,10 @@ extends Control
 @onready var next_button = $"Text background/Next Button"
 @onready var text_sound: AudioStreamPlayer2D = $"Text Sound"
 
+var defult_font = preload("res://UI/PTSerif-Regular.ttf")
+var thinking_font = preload("res://UI/PTSerif-Italic.ttf")
+
+
 #Pre-load font and stuff
 var empty_texture: Texture =  null
 var npc_texture
@@ -51,12 +55,16 @@ func _show_next_line():
 	var name = temp[0].strip_edges()
 	var body = temp[1].strip_edges()
 	
+	text_lable.add_theme_font_override("normal_font", defult_font)
+	name_lable.add_theme_font_override("normal_font", defult_font)
 	if name.to_lower() == "player":
 		portrait.texture = empty_texture
 		name = player_name
 	elif name.to_lower() == "think":
 		portrait.texture = empty_texture
-		name = "CHANGE FONT"
+		name = "Thinking"
+		text_lable.add_theme_font_override("normal_font", thinking_font)
+		name_lable.add_theme_font_override("normal_font", thinking_font)
 	else:
 		portrait.texture = npc_texture
 	
