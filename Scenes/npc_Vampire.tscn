@@ -18,7 +18,7 @@ animation = &"idel"
 
 [node name="Area3D" type="Area3D" parent="."]
 script = ExtResource("2_56t7n")
-portrait = "uid://clamf7d16cghu"
+portrait = "uid://c6j6w46n3tyjd"
 character_name = "Vampire"
 
 [node name="Talkbox" type="CollisionShape3D" parent="Area3D"]

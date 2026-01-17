@@ -1,5 +1,5 @@
 !branch - 0
-item : parcel_pink.png
+!item : parcel_pink.png
 Boss : “Okay, so this package needs to go to the big gothic mansion across the town.”
 Boss : “It’s real important that it arrives today as it’s for a birthday.”
 Boss : “Let me know once ya get back.”
@@ -15,7 +15,7 @@ Think : The Vampire opens the parcel to reveal colourful, sparkly birthday decor
 Think : You help the Vampire decorate the front of the house.
 !lock
 #[Change mansion texture to pink variant]
-item : null
+!item : null
 Vampire : “Thanks hun. I’ll make sure to tell your boss what a good little creature you are.”
 Think : That was easy.
 Think : Time for another job?
@@ -29,7 +29,7 @@ Boss : “I'm glad ya came back in one piece, kid.”
 !Script = menu.txt
 
 !branch - 2
-item : null
+!item : null
 #[player discards parcel from inventory]
 Think : You drop the parcel causing a pile of rainbow glitter to fall from a crack in the box.
 Think : They won't want a damaged parcel now so may as well take it back to the Boss.

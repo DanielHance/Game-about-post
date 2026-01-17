@@ -11,7 +11,7 @@ Think : The nearby lighthouse looks like the right place.
 
 !branch - 1
 #[player goes to lighthouse and interacts with it to deliver parcel]
-item : null
+!item : null
 Lighthouse owner : “Thanks, lad.”
 Lighthouse owner: “I’ve been waitin’ for this new lightbulb for a while.”
 Lighthouse owner: “Let’s go see if it works.”

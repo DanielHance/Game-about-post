@@ -9,7 +9,7 @@ FL : “I need someone to take these flowers to the graveyard.”
 FL : “They’re for someone really important to me so please take good care of them.”
 FL : “These legs of mine can’t take me as far as they used to.”
 FL : “I would be very grateful if you helped me.”
-item : flowers.png
+!item : flowers.png
 Think : You take the flowers from her.
 Think : Should you deliver the flowers to the graveyard or discard them? 
 
@@ -18,7 +18,7 @@ Think : Should you deliver the flowers to the graveyard or discard them?
 !branch - 1
 #[player goes to the graveyard]
 #[based on proximity, there is a ghost rave texture until the player goes near and the graveyard empties to show a new texture]
-item : null
+!item : null
 Think : The graveyard is eerily quiet.
 Think : Crows circle a singular grave, the only one that has been cared for in centuries.
 Think : You lay the flowers by the headstone, unable to make out its owner.
@@ -34,7 +34,7 @@ Boss : “Ya really helped me out there, bud.”
 
 !branch - 2
 #[player discards flowers]
-item : null
+!item : null
 Think : You toss the flowers aside.
 Think : They’ll biodegrade anyway? You tell yourself.
 Think : A man watches from a sidestreet and picks up the flowers.

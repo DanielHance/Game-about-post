@@ -18,7 +18,7 @@ animation = &"idel"
 
 [node name="Area3D" type="Area3D" parent="."]
 script = ExtResource("2_cpgr6")
-portrait = "uid://cxycsa4b0cxsx"
+portrait = "uid://bkajynefc304s"
 character_name = "Lighthouse Owner"
 
 [node name="Talkbox" type="CollisionShape3D" parent="Area3D"]

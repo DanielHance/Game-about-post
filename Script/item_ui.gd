@@ -10,6 +10,7 @@ func set_image(image_path: String):
 	if image_path == "":
 		image_rect.texture = null
 		visible = false
+		print("No Item")
 		return
 		
 	image_texture = load(image_path)
