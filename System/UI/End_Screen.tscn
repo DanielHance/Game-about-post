@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://4f73vqpwpmyq"]
+[gd_scene load_steps=5 format=3 uid="uid://4f73vqpwpmyq"]
 
 [ext_resource type="Texture2D" uid="uid://dnipcarfwjms4" path="res://UI/QuitButton.png" id="1_5jg4v"]
 [ext_resource type="Script" uid="uid://c0fa5g11dv0u1" path="res://System/UI/end_screen.gd" id="1_6hwx4"]
 [ext_resource type="Texture2D" uid="uid://durevtou2p283" path="res://UI/QuitButtonHover.png" id="2_wgbnx"]
+[ext_resource type="Texture2D" uid="uid://cjnv574305she" path="res://UI/EndScreen.png" id="4_6u05h"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -38,5 +39,10 @@ grow_vertical = 2
 texture_normal = ExtResource("1_5jg4v")
 texture_hover = ExtResource("2_wgbnx")
 stretch_mode = 0
+
+[node name="EndScreen" type="Sprite2D" parent="."]
+position = Vector2(900, 279)
+scale = Vector2(8, 8)
+texture = ExtResource("4_6u05h")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
