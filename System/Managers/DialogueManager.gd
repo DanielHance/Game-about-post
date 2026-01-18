@@ -9,6 +9,7 @@ var instance_button
 var instance_item
 var instance_end
 var mapManagerPointer = null
+var playerPointer = null
 
 var file_paths = [
 		"res://Script/prolog.txt",
@@ -70,6 +71,9 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 		
 	if lock:
 		return
+		
+	if playerPointer:
+		playerPointer.set_lock(true)
 	
 	for i in range(line_marker, text_files[current_script].size()):
 		line = text_files[current_script][i]
@@ -189,9 +193,14 @@ func button_return(callback: String, callbacks: Array):
 func finish_dialogue():
 	if button_flag:
 		_get_button_data()
+		return
 	if text_flag:
 		text_flag = false
 		dialogue(NPC_name, portrait_path, player_name)
+		return
+		
+	if playerPointer:
+		playerPointer.set_lock(false)
 		
 func _get_button_data():
 	print("Button flag is true")

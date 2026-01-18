@@ -2,7 +2,7 @@ extends Camera3D
 
 @export var player: CharacterBody3D
 @export var target: Node3D
-@export var offset = Vector3(0, 2, -2)
+@export var offset = Vector3(0, 1.5, -2)
 @export var smooth_speed = 10.0
 @export var mode = 0  # 0 = player, 1 = target
 
@@ -12,7 +12,7 @@ func _ready():
 	if player:
 		raycast.add_exception(player)
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var focus_point: Vector3
 
 	#Sets up mode
@@ -39,7 +39,8 @@ func _process(delta: float) -> void:
 		final_camera_pos = raycast.get_collision_point() - (desired_camera_pos - focus_point).normalized() * 0.1
 
 	# Smooth camera movement
-	global_position = global_position.move_toward(final_camera_pos, smooth_speed * delta)
+	var t = 1.0 - pow(0.001, delta * smooth_speed)  # smoother than move_toward
+	global_position = global_position.lerp(final_camera_pos, t)
 
 	# Look at the focus point
 	look_at(focus_point, Vector3.UP)

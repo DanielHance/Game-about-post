@@ -13,26 +13,30 @@ var lock = false
 
 func _ready() -> void:
 	sprite = $AnimatedSprite3D
+	DialogueManager.playerPointer = self
+	
 
 func _process(delta: float) -> void:
 	#Input Handling 
 	input_vec = Vector3.ZERO
-	if Input.get_action_strength("move_right"):
-		input_vec.x -= 1
-	elif Input.get_action_strength("move_left"):
-		input_vec.x += 1
-	elif Input.get_action_strength("move_up"):
-		input_vec.z += 1
-	elif Input.get_action_strength("move_down"):
-		input_vec.z -= 1
+	
+	if !lock:
+		if Input.get_action_strength("move_right"):
+			input_vec.x -= 1
+		elif Input.get_action_strength("move_left"):
+			input_vec.x += 1
+		elif Input.get_action_strength("move_up"):
+			input_vec.z += 1
+		elif Input.get_action_strength("move_down"):
+			input_vec.z -= 1
 		
 	input_vec = input_vec.normalized() #Just to be safe
 	
 func _physics_process(delta: float) -> void:
 	#------------------------------------Movement
 	velocity = input_vec * speed
-	if !lock:
-		move_and_slide()
+	
+	move_and_slide()
 	look_at(global_transform.origin + front_vec, Vector3.UP)
 	
 	#-----------------------------------Animation

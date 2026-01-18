@@ -1,12 +1,12 @@
-[gd_scene load_steps=89 format=3 uid="uid://dhyy1nuvvpimk"]
+[gd_scene load_steps=90 format=3 uid="uid://dhyy1nuvvpimk"]
 
-[ext_resource type="Script" path="res://System/Managers/MapManager.gd" id="1_66igf"]
+[ext_resource type="Script" uid="uid://cnco88dsqr7l6" path="res://System/Managers/MapManager.gd" id="1_66igf"]
 [ext_resource type="ArrayMesh" uid="uid://cgtdb13q625g1" path="res://Objects/3D Models/Models/Buildings/MailCentre.obj" id="1_h2i6u"]
 [ext_resource type="ArrayMesh" uid="uid://tn2p5qpjss7l" path="res://Objects/3D Models/Models/Buildings/LightHouse.obj" id="2_6sxhy"]
 [ext_resource type="Material" uid="uid://bxtifeikmngb2" path="res://Objects/3D Models/Materials/MAT_Wood1_Window.tres" id="2_iskq8"]
-[ext_resource type="Material" path="res://Objects/3D Models/Materials/MAT_GroundSurrounding.tres" id="2_yv5m6"]
+[ext_resource type="Material" uid="uid://5wjltjvqvumj" path="res://Objects/3D Models/Materials/MAT_GroundSurrounding.tres" id="2_yv5m6"]
 [ext_resource type="Material" uid="uid://77suyjngxo8n" path="res://Objects/3D Models/Materials/MAT_MailCentre.tres" id="3_edt1c"]
-[ext_resource type="Material" path="res://Objects/3D Models/Materials/MAT_Ground.tres" id="3_i4ux1"]
+[ext_resource type="Material" uid="uid://mhe2ppq3g3er" path="res://Objects/3D Models/Materials/MAT_Ground.tres" id="3_i4ux1"]
 [ext_resource type="ArrayMesh" uid="uid://b43ur6iwatuo7" path="res://Objects/3D Models/Models/Buildings/House1.obj" id="3_mde35"]
 [ext_resource type="Material" uid="uid://chhr7tk3rf4r" path="res://Objects/3D Models/Materials/MAT_BlueTiles.tres" id="4_5u6sv"]
 [ext_resource type="ArrayMesh" uid="uid://e7lx8b04k24t" path="res://Objects/3D Models/Models/Buildings/VampireManor.obj" id="4_bv2ho"]
@@ -42,6 +42,9 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ajhdr"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yv5m6"]
+size = Vector3(2.61523, 0.118164, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rq1x1"]
 
@@ -274,6 +277,14 @@ surface_material_override/0 = ExtResource("2_yv5m6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ajhdr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="MeshInstance3D5/StaticBody3D"]
+transform = Transform3D(0.177274, 0.984161, -0.000174418, -0.984161, 0.177274, -0.000846893, -0.000802554, 0.000321806, 1, -0.679563, 1.50533, 0.104405)
+shape = SubResource("BoxShape3D_yv5m6")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="MeshInstance3D5/StaticBody3D"]
+transform = Transform3D(0.177274, 0.984161, -0.000174418, -0.984161, 0.177274, -0.000846893, -0.000802554, 0.000321807, 1, 1.76765, 9.99523, 0.114226)
+shape = SubResource("BoxShape3D_yv5m6")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.528127, 0, 20.6264, 0, 6.95197, 0, -19.6061, 0, -0.555611, -0.0067296, 0.0713997, -8.92071)
@@ -1132,8 +1143,9 @@ surface_material_override/0 = ExtResource("7_66igf")
 shape = SubResource("ConcavePolygonShape3D_s7e54")
 
 [node name="NPC_Test4" parent="." instance=ExtResource("32_kjgdk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.875945, 0.36545, -5.89341)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -2.05269, 0.828416, -3.34734)
 
 [node name="Label3D" type="Label3D" parent="NPC_Test4"]
 transform = Transform3D(-0.998799, 0, 0.0489891, 0, 1, 0, -0.0489891, 0, -0.998799, 0, 0, -0.227664)
+visible = false
 text = "Guy"
