@@ -174,10 +174,13 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 	print("Lanch")
 	_start_dialogue(lines, portrait_path, player_name, NPC_name)
 	
-func button_return(callback: String, callbacks: Array):
+func button_return(to_lock: String, callback: String, callbacks: Array):
 	#This line sucks and should be change at some point 
+	print("DEBUGGING HERE!!!!!!")
+	print("callback: " + callback)
+	print("callbacks: ", callbacks)
 	if current_script == 1:
-		button_locks.append(callbacks.find(callback))
+		button_locks.append(to_lock)
 		
 	if callback.is_valid_int():
 		current_branch = int(callback)
@@ -214,8 +217,9 @@ func _get_button_data():
 	var callbacks: Array = []
 	var part
 	for i in range(len(data)):
-		if i not in button_locks:  
-			part = data[i].split("=", false, 1)
+		part = data[i].split("=", false, 1)
+		print(part[0])
+		if part[0].strip_edges() not in button_locks:
 			lables.append(part[0].strip_edges())
 			callbacks.append(part[1].strip_edges().to_lower())
 	_start_dialogue_buttons(lables, callbacks)

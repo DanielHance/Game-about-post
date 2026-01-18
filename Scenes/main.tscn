@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dsfdmf2j6j5px" path="res://Objects/Player/NPCPNGS/Ghost2.png" id="10_cbgmd"]
 [ext_resource type="PackedScene" uid="uid://d2pdtp28tngp7" path="res://Scenes/npc_Vampire.tscn" id="10_wsu2k"]
 [ext_resource type="Texture2D" uid="uid://bvcd8db28qunk" path="res://Objects/Player/NPCPNGS/Ghost3.png" id="11_1w6v2"]
-[ext_resource type="AudioStream" uid="uid://c728ue0q5redi" path="res://Sound/GameJamMusic.wav" id="26_cbgmd"]
+[ext_resource type="AudioStream" uid="uid://bale1dqkjigk4" path="res://Sound/GameJamMusic.ogg" id="13_fdnlq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ueoa1"]
 animations = [{
@@ -76,7 +76,7 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_7k868")
 
 [node name="Player" parent="." instance=ExtResource("1_8gbba")]
-transform = Transform3D(3.3, 0, 0, 0, 3.3, 0, 0, 0, 3.3, 14.0264, 0.397939, -1.44051)
+transform = Transform3D(3.3, 0, 0, 0, 3.3, 0, 0, 0, 3.3, 14.2396, 0.397939, 0.618004)
 
 [node name="NPC_Test" parent="." instance=ExtResource("5_kry3j")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 14.1996, 0.538033, 1.19171)
@@ -127,6 +127,7 @@ visible = false
 text = "Vampire"
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("26_cbgmd")
+stream = ExtResource("13_fdnlq")
 volume_db = 1.107
 autoplay = true
+parameters/looping = true
