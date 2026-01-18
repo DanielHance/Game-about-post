@@ -1,7 +1,7 @@
 branch - 0
 Boss: “So what shall we do?”
 
-!button : LoveLetters = love_letter.txt, LighthouseQuest = lighthouse.txt, Vampires = vampire.txt, Ghosts = graveyard.txt
+!button : Deliver one of the crushed letters. = love_letter.txt, Deliver a fragile parcel. = lighthouse.txt, Deliver a colourful parcel. = vampire.txt, Do a favour for your new boss. = graveyard.txt
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%The text below this will never run beacuse of the buttons above changing the script
 !branch - 1

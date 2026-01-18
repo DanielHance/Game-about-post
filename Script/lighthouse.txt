@@ -29,7 +29,7 @@ Boss: “Nice one, kid.”
 #[player discards parcel from inventory]
 !item : null
 Think : You hear the sound of smashed glass as you toss the package aside.
-Think : It's better to return quick so the Boss doesn't get too mad if he finds out.
+Think : It's better to return quick so the boss doesn't get too mad if he finds out.
 #[player returns to the mail center]
 Boss : “A lil birdy told me the lighthouse didn’t get its parcel.”
 Player: “How could you know?”
