@@ -250,7 +250,7 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="Player" parent="." instance=ExtResource("1_8gbba")]
-transform = Transform3D(2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, 14.0264, 0.359957, -1.44051)
+transform = Transform3D(3.3, 0, 0, 0, 3.3, 0, 0, 0, 3.3, 14.0264, 0.359957, -1.44051)
 
 [node name="NPC_Test" parent="." instance=ExtResource("5_kry3j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.18375, 0, -2.78616)
