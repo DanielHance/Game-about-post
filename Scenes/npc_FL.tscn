@@ -34,10 +34,11 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_a3ykw")
 animation = &"Idle"
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("sprite")]
 script = ExtResource("2_1cont")
 portrait = "uid://dhuh8vsnhdodc"
 character_name = "FL"
+sprite = NodePath("../AnimatedSprite3D")
 
 [node name="Talkbox" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_j1pmc")

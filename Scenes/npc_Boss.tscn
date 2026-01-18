@@ -4,6 +4,12 @@
 [ext_resource type="Script" uid="uid://17c55oksfhvr" path="res://Objects/NPC/npc_test.gd" id="2_jhu34"]
 [ext_resource type="Texture2D" uid="uid://cm5tmwidxieuv" path="res://Objects/Player/NPCPNGS/BossIdlePixel.png" id="2_ni1ax"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_j1pmc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eto13"]
+radius = 0.146935
+height = 0.792501
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ivjdl"]
 animations = [{
 "frames": [{
@@ -12,35 +18,28 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_ni1ax")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_jhu34")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 3.0
 }]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_j1pmc"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eto13"]
-radius = 0.146935
-height = 0.792501
-
 [node name="NPC_Test" type="Node3D"]
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_ivjdl")
-animation = &"idle"
-
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("sprite")]
 script = ExtResource("2_jhu34")
 portrait = "uid://bqyyh6l1jelaq"
 character_name = "Boss"
+sprite = NodePath("../AnimatedSprite3D")
 
 [node name="Talkbox" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_j1pmc")
 
 [node name="Hitbox" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_eto13")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_ivjdl")
+animation = &"idle"
+frame_progress = 0.95015

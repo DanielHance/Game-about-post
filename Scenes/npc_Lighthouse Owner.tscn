@@ -12,9 +12,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_tn006")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_cpgr6")
 }],
 "loop": true,
 "name": &"Idle",
@@ -33,11 +30,13 @@ height = 0.792501
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_gsert")
 animation = &"Idle"
+frame_progress = 0.0115053
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("sprite")]
 script = ExtResource("2_cpgr6")
 portrait = "uid://bkajynefc304s"
 character_name = "Lighthouse Owner"
+sprite = NodePath("../AnimatedSprite3D")
 
 [node name="Talkbox" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_j1pmc")
