@@ -61,9 +61,6 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 	print("Start")
 	print("Script = ", current_script)
 	
-	if mapManagerPointer:
-		mapManagerPointer.smart_map("lighthouse", true)
-	
 	#TEMP - Chage later :D
 	if score == 4:
 		current_script = file_paths.find("res://Script/epilogue.txt")
@@ -152,7 +149,11 @@ func dialogue(NPC_name_local: String, portrait_path_local: String, player_name_l
 					text_flag = true
 					
 				elif line.to_lower().begins_with("!map"):
-					parts = line.split
+					if mapManagerPointer:
+						parts = line.split(":", false, 1)
+						sub_parts = parts[1].split("=", false, 1)
+						print(sub_parts[1].strip_edges().to_lower())
+						mapManagerPointer.smart_map(sub_parts[0].strip_edges().to_lower(), sub_parts[1].strip_edges().to_lower().to_int())
 				
 					
 				elif ":" in line:

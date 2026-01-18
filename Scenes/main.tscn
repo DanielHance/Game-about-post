@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://sjxl8cgxaggn"]
+[gd_scene load_steps=35 format=3 uid="uid://sjxl8cgxaggn"]
 
 [ext_resource type="PackedScene" uid="uid://c4vq270cfcl1x" path="res://Scenes/player.tscn" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dhyy1nuvvpimk" path="res://Scenes/test_world.tscn" id="2_jjvhh"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bjh3sq2lpl04o" path="res://Scenes/npc_Graveyard.tscn" id="6_d1ilt"]
 [ext_resource type="Texture2D" uid="uid://davpn43qfdaef" path="res://Objects/Player/NPCPNGS/FLIdlePixel.png" id="6_gt3je"]
 [ext_resource type="Texture2D" uid="uid://g5rwmdyg5wac" path="res://Objects/Player/NPCPNGS/LightouseKeeperPixel.png" id="7_3pmx8"]
-[ext_resource type="PackedScene" uid="uid://80gsn82yy1c7" path="res://Scenes/npc_Guy.tscn" id="7_6iyac"]
 [ext_resource type="PackedScene" uid="uid://c1xao10f72wr4" path="res://Scenes/npc_Lady.tscn" id="8_fdnlq"]
 [ext_resource type="Texture2D" uid="uid://i0si5j3gwiat" path="res://Objects/Player/NPCPNGS/LKIdlePixel.png" id="8_u50mg"]
 [ext_resource type="Texture2D" uid="uid://bvgopf81hlens" path="res://Objects/Player/NPCPNGS/VampirePixel.png" id="9_cbgmd"]
@@ -273,13 +272,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57794, 0, -2.79379)
 [node name="Label3D" type="Label3D" parent="NPC_Test3"]
 transform = Transform3D(-0.999057, 0, 0.0434102, 0, 1, 0, -0.0434102, 0, -0.999057, 0, 0, -0.349007)
 text = "Graveyard"
-
-[node name="NPC_Test4" parent="." instance=ExtResource("7_6iyac")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.875945, 0, -2.77081)
-
-[node name="Label3D" type="Label3D" parent="NPC_Test4"]
-transform = Transform3D(-0.998799, 0, 0.0489891, 0, 1, 0, -0.0489891, 0, -0.998799, 0, 0, -0.227664)
-text = "Guy"
 
 [node name="NPC_Test5" parent="." instance=ExtResource("8_fdnlq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71742, 0, -2.86859)

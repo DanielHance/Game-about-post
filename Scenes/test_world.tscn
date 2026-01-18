@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://dhyy1nuvvpimk"]
+[gd_scene load_steps=87 format=3 uid="uid://dhyy1nuvvpimk"]
 
 [ext_resource type="Script" uid="uid://cnco88dsqr7l6" path="res://System/Managers/MapManager.gd" id="1_66igf"]
 [ext_resource type="ArrayMesh" uid="uid://cgtdb13q625g1" path="res://Objects/3D Models/Models/Buildings/MailCentre.obj" id="1_h2i6u"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://dsfdmf2j6j5px" path="res://Objects/Player/NPCPNGS/Ghost2.png" id="23_05rmm"]
 [ext_resource type="Material" uid="uid://bhm5mvfm88n2j" path="res://Objects/3D Models/Materials/MAT_Corn.tres" id="24_n8aeu"]
 [ext_resource type="Texture2D" uid="uid://bvcd8db28qunk" path="res://Objects/Player/NPCPNGS/Ghost3.png" id="24_yv5m6"]
+[ext_resource type="PackedScene" uid="uid://80gsn82yy1c7" path="res://Scenes/npc_Guy.tscn" id="32_kjgdk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_byarb"]
 
@@ -368,6 +369,7 @@ surface_material_override/3 = ExtResource("10_05rmm")
 
 [node name="PartyFlags" type="MeshInstance3D" parent="VampireManor"]
 transform = Transform3D(0.999894, 0, 0.014538, 0, 1, 0, -0.014538, 0, 0.999894, 2.59828, -4.16036, -0.0700588)
+visible = false
 mesh = ExtResource("5_byarb")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="VampireManor/PartyFlags"]
@@ -377,6 +379,7 @@ shape = SubResource("ConcavePolygonShape3D_sbymo")
 
 [node name="PartyFlags2" type="MeshInstance3D" parent="VampireManor"]
 transform = Transform3D(0.00396208, 0, 0.999992, 0, 1, 0, -0.999992, 0, 0.00396208, -0.19456, -4.16036, -2.74751)
+visible = false
 mesh = ExtResource("5_byarb")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="VampireManor/PartyFlags2"]
@@ -386,6 +389,7 @@ shape = SubResource("ConcavePolygonShape3D_pneb4")
 
 [node name="PartyFlags3" type="MeshInstance3D" parent="VampireManor"]
 transform = Transform3D(-0.0274683, 0, -0.999623, 0, 1, 0, 0.999623, 0, -0.0274683, -0.455906, -4.16036, 2.77384)
+visible = false
 mesh = ExtResource("5_byarb")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="VampireManor/PartyFlags3"]
@@ -1115,3 +1119,10 @@ surface_material_override/0 = ExtResource("7_66igf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WoodenFence12/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_s7e54")
+
+[node name="NPC_Test4" parent="." instance=ExtResource("32_kjgdk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.875945, 0.36545, -5.89341)
+
+[node name="Label3D" type="Label3D" parent="NPC_Test4"]
+transform = Transform3D(-0.998799, 0, 0.0489891, 0, 1, 0, -0.0489891, 0, -0.998799, 0, 0, -0.227664)
+text = "Guy"

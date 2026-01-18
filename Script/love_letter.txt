@@ -27,6 +27,7 @@ Guy : “Thank you, kind stranger.”
 Think : With a nod, he rushes off. 
 Think : It's looking late enough to head back to your boss.
 #[delete Guy character in game]
+!map: Guy = 0
 #[player returns to the mail center]
 Boss : “I hear that little lady ya sent the letter to is going on a date tonight.”
 Think : He seems to have not noticed the letter’s disappearance.

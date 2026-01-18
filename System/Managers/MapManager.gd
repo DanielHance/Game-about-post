@@ -5,6 +5,7 @@ extends Node3D
 @onready var model_party2: MeshInstance3D = $VampireManor/PartyFlags2
 @onready var model_party3: MeshInstance3D = $VampireManor/PartyFlags3
 @onready var model_grave: MeshInstance3D = $Graveyard/RaveGear
+@onready var model_guy: Node3D = $NPC_Test4
 
 func _ready():
 	DialogueManager.mapManagerPointer = self
@@ -32,12 +33,25 @@ func grave_party(show: bool = true):
 	else:
 		model_grave.hide()
 		
-func smart_map(type: String, show: bool = true):
+func guy_delete(show: bool = true):
+	if show:
+		model_guy.show()
+	else:
+		model_guy.hide()
+		
+func smart_map(type: String, temp: int = 1):
+	var show
+	if temp == 1:
+		show = true
+	else:
+		show = false
 	if type == "vamp_house":
 		vamp_house_party(show)
 	elif type == "lighthouse":
 		lighthouse_light(show)
 	elif type == "grave_party":
 		grave_party(show)
+	elif type == "guy":
+		guy_delete(show)
 	else:
 		print("Error --- smart map does not know " + type)

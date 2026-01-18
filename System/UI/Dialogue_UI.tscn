@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cp2jjxhypkloa"]
+[gd_scene load_steps=4 format=3 uid="uid://cp2jjxhypkloa"]
 
 [ext_resource type="Script" uid="uid://bvp2112rhgnmo" path="res://System/UI/dialogue_ui.gd" id="1_e03r2"]
 [ext_resource type="Texture2D" uid="uid://cgq1j2sp6m7ms" path="res://UI/NextButton.png" id="2_gx4kk"]
+[ext_resource type="Texture2D" uid="uid://cy0lblatvqswg" path="res://UI/NextButtonHover.png" id="3_2slsu"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -79,6 +80,7 @@ offset_top = -48.0
 offset_right = 1151.0
 offset_bottom = 2.0
 texture_normal = ExtResource("2_gx4kk")
+texture_pressed = ExtResource("3_2slsu")
 stretch_mode = 0
 
 [node name="Text Sound" type="AudioStreamPlayer2D" parent="."]

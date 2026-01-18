@@ -4,8 +4,8 @@ extends Control
 @onready var container = $VBoxContainer
 
 var normal_tex = preload("res://UI/ButtonEmpty.png")
-var hover_tex = preload("res://UI/NextButton.png")
-var pressed_tex = preload("res://UI/PlayButtonHover.png")
+var hover_tex = preload("res://UI/EmptyButtonHover.png")
+var pressed_tex = preload("res://UI/EmptyButtonHover.png")
 var button_font = preload("res://UI/PTSerif-Regular.ttf")
 
 var _callback: Array = []
