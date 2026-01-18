@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://4f73vqpwpmyq"]
+[gd_scene load_steps=7 format=3 uid="uid://4f73vqpwpmyq"]
 
 [ext_resource type="Texture2D" uid="uid://dnipcarfwjms4" path="res://UI/QuitButton.png" id="1_5jg4v"]
 [ext_resource type="Script" uid="uid://c0fa5g11dv0u1" path="res://System/UI/end_screen.gd" id="1_6hwx4"]
 [ext_resource type="Texture2D" uid="uid://durevtou2p283" path="res://UI/QuitButtonHover.png" id="2_wgbnx"]
 [ext_resource type="Texture2D" uid="uid://dfyiprye17hn0" path="res://UI/GameCapture.PNG" id="4_ihoqs"]
 [ext_resource type="Texture2D" uid="uid://cjnv574305she" path="res://UI/EndScreen.png" id="5_7ihs6"]
+[ext_resource type="Texture2D" uid="uid://c2utuwjfj3gfe" path="res://UI/CreditPage.png" id="6_7ihs6"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -25,23 +26,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="TextureButton" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -65.0
-offset_top = 182.0
-offset_right = 81.0
-offset_bottom = 229.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("1_5jg4v")
-texture_hover = ExtResource("2_wgbnx")
-stretch_mode = 0
-
 [node name="GameCapture" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(749, 314)
@@ -49,8 +33,30 @@ scale = Vector2(1.2, 1.2)
 texture = ExtResource("4_ihoqs")
 
 [node name="EndScreen" type="Sprite2D" parent="."]
-position = Vector2(785, 193)
+position = Vector2(962, 257)
 scale = Vector2(5, 5)
 texture = ExtResource("5_7ihs6")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 89.0
+offset_top = 143.0
+offset_right = 235.0
+offset_bottom = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_5jg4v")
+texture_hover = ExtResource("2_wgbnx")
+stretch_mode = 0
+
+[node name="CreditPage" type="Sprite2D" parent="."]
+position = Vector2(140, 327)
+scale = Vector2(0.948572, 0.948572)
+texture = ExtResource("6_7ihs6")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
