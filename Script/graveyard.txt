@@ -3,12 +3,12 @@
 Boss : “Ah, well if ya wanna do a favour for me, there’s a lady who has a special delivery.”
 Boss : “You’ll need to collect it from her, I believe she has grey hair and likes the colour purple.”
 #[player finds flower lady (FL)]
-FL : “Hello there, can you help me?”
+Florist : “Hello there, can you help me?”
 !button: Nod. = 0
-FL : “I need someone to take these flowers to the graveyard.”
-FL : “They’re for someone really important to me so please take good care of them.”
-FL : “These legs of mine can’t take me as far as they used to.”
-FL : “I would be very grateful if you helped me.”
+Florist : “I need someone to take these flowers to the graveyard.”
+Florist : “They’re for someone really important to me so please take good care of them.”
+Florist : “These legs of mine can’t take me as far as they used to.”
+Florist : “I would be very grateful if you helped me.”
 !item : flowers.png
 Think : You take the flowers from her.
 Think : Should you deliver the flowers to the graveyard or discard them? 
@@ -19,6 +19,7 @@ Think : Should you deliver the flowers to the graveyard or discard them?
 #[player goes to the graveyard]
 #[based on proximity, there is a ghost rave texture until the player goes near and the graveyard empties to show a new texture]
 !item : null
+!map: grave_party = 0
 Think : The graveyard is eerily quiet.
 Think : Crows circle a singular grave, the only one that has been cared for in centuries.
 Think : You lay the flowers by the headstone, unable to make out its owner.

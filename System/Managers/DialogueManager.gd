@@ -22,7 +22,7 @@ var file_paths = [
 	]
 
 var end_flag = false
-var score: int = 3  #This varable sucks and should be changed at a later data!!!!
+var score: int = 0  #This varable sucks and should be changed at a later data!!!!
 var button_locks = [] 
 var text_files = []
 var current_script: int = 0

@@ -12,6 +12,10 @@ func set_image(image_path: String):
 		visible = false
 		print("No Item")
 		return
+	elif image_path == "res://UI/delete":
+		queue_free()
+		print("")
+		return
 		
 	image_texture = load(image_path)
 	image_rect.texture = image_texture
